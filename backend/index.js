@@ -22,6 +22,10 @@ try {
   console.log("failed", error);
 }
 
+app.get("/", (req, res) => {
+  res.send("hello hacker");
+  console.log("Hello ");
+});
 // define route
 
 app.use("/book", bookRoute);

@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Introduction to Quantum Mechanics",
+    "provider": "MIT OpenCourseWare",
+    "date": "2023-02-14",
+    "id": "001",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "/DATA DIR/Chemistry Practise Question/bc-00-chm-1.5-watermark.pdf"
+  },
+
+  {
+    "title": "Advanced Java Programming",
+    "provider": "Coursera",
+    "date": "2023-05-21",
+    "id": "002",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "/DATA DIR/Physics International Books/Brief Answers to the Big Questions by Stephen Hawking.pdf"
+  },
+  {
+    "title": "Data Structures and Algorithms",
+    "provider": "edX",
+    "date": "2023-08-10",
+    "id": "003",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://moldskill-git-main-msk1116s-projects.vercel.app/DATA%20DIR/Physics%20International%20Books/Brief%20Answers%20to%20the%20Big%20Questions%20by%20Stephen%20Hawking.pdf"
+  },
+  {
+    "title": "Introduction to Psychology",
+    "provider": "Khan Academy",
+    "date": "2023-03-27",
+    "id": "004",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  },
+  {
+    "title": "Machine Learning Basics",
+    "provider": "Udacity",
+    "date": "2023-11-05",
+    "id": "005",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  },
+  {
+    "title": "Understanding Artificial Intelligence",
+    "provider": "Udemy",
+    "date": "2023-09-15",
+    "id": "006",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  },
+  {
+    "title": "Web Development with React",
+    "provider": "Codecademy",
+    "date": "2023-06-30",
+    "id": "007",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  },
+  {
+    "title": "Financial Accounting Fundamentals",
+    "provider": "FutureLearn",
+    "date": "2023-01-12",
+    "id": "008",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  },
+  {
+    "title": "Environmental Science",
+    "provider": "Coursera",
+    "date": "2023-04-18",
+    "id": "009",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  },
+  {
+    "title": "Digital Marketing Essentials",
+    "provider": "HubSpot Academy",
+    "date": "2023-07-25",
+    "id": "010",
+    "thumbnail": "https://www.wikihow.com/images/thumb/f/f5/Take-Better-Notes-Step-9-Version-2.jpg/v4-460px-Take-Better-Notes-Step-9-Version-2.jpg.webp",
+    "auth": "",
+    "link": "https://pdfobject.com/pdf/sample.pdf"
+  }
+]

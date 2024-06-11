@@ -29,7 +29,7 @@ function Signup() {
         if (res.data) {
           toast.success("Welcome To Mold Skill! ", { id: toastId });
           console.log("Welcome To Mold Skill! ", { id: toastId });
-          localStorage.setItem("user", JSON.stringify(data));
+          localStorage.setItem("user", JSON.stringify(res.data.storage));
           navigate(from, { replace: true });
           setTimeout(() => {
             window.location.reload();

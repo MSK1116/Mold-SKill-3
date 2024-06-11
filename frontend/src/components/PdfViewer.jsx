@@ -201,7 +201,6 @@ const PdfViewer = () => {
               Next
             </button>
           </div>
-
           <div>
             <p>
               Page {pageNumber} of {numPages}

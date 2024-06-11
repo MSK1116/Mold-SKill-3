@@ -8,11 +8,12 @@ import Practise_card1 from "./Practise_card1";
 
 const Phy_xi_p = () => {
   const [notes_list, setNotesXi] = useState([]);
-  const toastID = toast.loading("Loading...", {
-    position: "top-center",
-  });
 
   useEffect(() => {
+    const toastID = toast.loading("Loading...", {
+      position: "top-center",
+    });
+
     const getNotesXiPhy = async () => {
       try {
         toast.loading("Loading...", { id: toastID });
@@ -22,11 +23,12 @@ const Phy_xi_p = () => {
       } catch (error) {
         console.log("error", error);
         toast.error("Failed to fetch", { id: toastID });
+      } finally {
+        toast.remove(toastID);
       }
     };
     getNotesXiPhy();
   }, []);
-  toast.remove(toastID);
   const filterData = notes_list.filter((data) => data.subject == "Physics");
 
   document.title = "Physics-XI By Mold Skill";

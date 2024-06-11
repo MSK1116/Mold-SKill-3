@@ -190,8 +190,8 @@ const PdfViewer = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-screen-2xl container mx-auto md:px-20px px-4 flex flex-row md:flex-col">
-        <div className="my-24  flex flex-row place-content-between ">
+      <div className="max-w-screen-2xl container mx-auto md:px-20px px-4 flex flex-col">
+        <div className="my-24  flex md:flex-row gap-y-3 flex-col place-content-between ">
           <div className="flex flex-row place-content-center gap-x-4">
             <input className="bg-white outline-none border rounded-md dark:text-slate-900 ml-4" type="text" placeholder="Jump to page.." onChange={handlePageInputChange} />
             <button className="btn bg-blue-700 hover:bg-blue-500 text-white" onClick={() => setPageNumber(pageNumber - 1)} disabled={pageNumber <= 1}>

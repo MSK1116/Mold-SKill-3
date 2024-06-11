@@ -8,11 +8,12 @@ import axios from "axios";
 import toast from "react-hot-toast";
 const Eng_xi_p = () => {
   const [notes_list, setNotesXi] = useState([]);
-  const toastID = toast.loading("Loading...", {
-    position: "top-center",
-  });
 
   useEffect(() => {
+    const toastID = toast.loading("Loading...", {
+      position: "top-center",
+    });
+
     const getNotesXiEng = async () => {
       try {
         toast.loading("Loading...", { id: toastID });
@@ -22,11 +23,13 @@ const Eng_xi_p = () => {
       } catch (error) {
         console.log("error", error);
         toast.error("Failed to fetch", { id: toastID });
+      } finally {
+        toast.remove(toastID);
       }
     };
     getNotesXiEng();
   }, []);
-  toast.remove(toastID);
+
   const filterData = notes_list.filter((data) => data.subject == "English");
 
   document.title = "English-XI By Mold Skill";

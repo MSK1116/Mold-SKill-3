@@ -18,7 +18,8 @@ const Login = () => {
       password: data.password,
     };
     const toastId = toast.loading("Working...");
-    await axios
+
+    https: await axios
       .post("https://mold-s-kill-3-api.vercel.app/user/login", userInfo)
       .then((res) => {
         if (res.data) {

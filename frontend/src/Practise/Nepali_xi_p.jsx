@@ -8,11 +8,11 @@ import axios from "axios";
 import toast from "react-hot-toast";
 const Nepali_xi_p = () => {
   const [notes_list, setNotesXi] = useState([]);
-  const toastID = toast.loading("Loading...", {
-    position: "top-center",
-  });
 
   useEffect(() => {
+    const toastID = toast.loading("Loading...", {
+      position: "top-center",
+    });
     const getNotesXiNep = async () => {
       try {
         toast.loading("Loading...", { id: toastID });
@@ -22,11 +22,12 @@ const Nepali_xi_p = () => {
       } catch (error) {
         console.log("error", error);
         toast.error("Failed to fetch", { id: toastID });
+      } finally {
+        toast.remove(toastID);
       }
     };
     getNotesXiNep();
   }, []);
-  toast.remove(toastID);
 
   const filterData = notes_list.filter((data) => data.subject == "Nepali");
 

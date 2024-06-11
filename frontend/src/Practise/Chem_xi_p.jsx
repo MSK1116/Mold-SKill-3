@@ -10,25 +10,25 @@ import toast from "react-hot-toast";
 const Chem_xi_p = () => {
   const [notes_list, setNotesXi] = useState([]);
 
-  const toastID = toast.loading("Loading...", {
-    position: "top-center",
-  });
-
   useEffect(() => {
+    const toastID = toast.loading("Loading...", {
+      position: "top-center",
+    });
     const getNotesXiChem = async () => {
       try {
-        toast.loading("Loading...", { id: toastID });
         const res = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
         toast.success("Loaded...", { duration: 3000, id: toastID });
         setNotesXi(res.data);
       } catch (error) {
         console.log("error", error);
         toast.error("Failed to fetch", { id: toastID });
+      } finally {
+        toast.remove(toastID);
       }
     };
     getNotesXiChem();
   }, []);
-  toast.remove(toastID);
+
   const filterData = notes_list.filter((data) => data.subject == "Chemistry");
 
   document.title = "Chemistry-XI By Mold Skill";

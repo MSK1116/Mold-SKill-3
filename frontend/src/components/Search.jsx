@@ -10,7 +10,7 @@ const Search = () => {
   const [results, setResults] = useState([]);
   const fetchData = async (value) => {
     try {
-      const toastID = toast.loading("Loading...", {
+      const toastID = toast.loading("Searching...", {
         position: "bottom-right",
       });
       const notesXi = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");

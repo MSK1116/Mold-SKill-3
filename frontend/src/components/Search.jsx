@@ -52,13 +52,14 @@ const Search = () => {
           <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" />
         </svg>
       </label>
-      <div className=" w-full bg-slate-200 rounded-md mt-3 overflow-y-scroll max-h-[300px] flex flex-col shadow-md">
+      <div className=" w-full z-100 bg-slate-200 rounded-md mt-3 overflow-y-scroll max-h-[300px] flex flex-col shadow-md">
         {results.length == 0 && input.length > 2 ? (
           <div>No result found</div>
         ) : (
           results.map((result, id) => {
             return (
               <div
+                className=" outline-none bg-white hover:bg-slate-300 dark:bg-slate-500 hover:dark:bg-slate-300 cursor-pointer border-none gap-y-6 p-2 rounded-sm shadow-md text-start"
                 onClick={() => {
                   navigate("/pdfA", { state: result });
                 }}

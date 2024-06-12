@@ -1,7 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { useAuth } from "../context/Authprovider";
-import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const [authUser, setAuthUser] = useAuth();

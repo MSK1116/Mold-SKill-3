@@ -17,7 +17,7 @@ function Signup() {
   } = useForm();
   const onSubmit = async (data) => {
     const userInfo = {
-      fullname: data.fullName,
+      fullname: data.fullname,
       email: data.email,
       password: data.password,
       clzname: data.clzname,
@@ -29,7 +29,7 @@ function Signup() {
         if (res.data) {
           toast.success("Welcome To Mold Skill! ", { id: toastId });
           console.log("Welcome To Mold Skill! ", { id: toastId });
-          localStorage.setItem("user", JSON.stringify(res.data.storage));
+          localStorage.setItem("user", JSON.stringify(data));
           navigate(from, { replace: true });
           setTimeout(() => {
             window.location.reload();
@@ -52,8 +52,8 @@ function Signup() {
           <div className="bg-white dark:bg-slate-800 mt-10 px-8 py-10 rounded shadow-md text-black w-full">
             <h1 className="mb-8 text-3xl text-center dark:text-white">Sign up</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input {...register("fullName", { required: true })} type="text" className="block border border-gray-300 w-full bg-white p-3 rounded mb-4" name="fullName" placeholder="Full Name" />
-              {errors.fullName && <span className="text-sm text-red-500 ">This field is required</span>}
+              <input {...register("fullname", { required: true })} type="text" className="block border border-gray-300 w-full bg-white p-3 rounded mb-4" name="fullname" placeholder="Full Name" />
+              {errors.fullname && <span className="text-sm text-red-500 ">This field is required (for e.g Manish Singh)</span>}
 
               <input {...register("email", { required: true })} type="text" className="block border border-gray-300 w-full bg-white p-3 rounded mb-4" name="email" placeholder="Email" />
               {errors.email && <span className="text-sm text-red-500 ">This field is required</span>}

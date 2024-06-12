@@ -18,7 +18,7 @@ export const signup = async (req, res) => {
       clzname: clzname,
     });
     await createdUser.save();
-    res.status(201).json({ message: "user created! Happy ETN" });
+    res.status(201).json({ message: "user created! Happy Mold" });
   } catch (error) {
     console.log("Failed user_controller.js", error.message);
     res.status(500).json({ message: "Internal server error" });
@@ -44,7 +44,6 @@ export const login = async (req, res) => {
         _id: user._id,
         fullname: user.fullname,
         email: user.email,
-        clzname: user.clzname,
       },
     });
   } catch (error) {

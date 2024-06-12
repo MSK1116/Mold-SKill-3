@@ -23,7 +23,7 @@ const Login = () => {
       .post("https://mold-s-kill-3-api.vercel.app/user/login", userInfo)
       .then((res) => {
         if (res.data) {
-          toast.success("Welcome To ETN, you're logged in", { id: toastId });
+          toast.success("Welcome To Mold Skill, you're logged in", { id: toastId });
           document.getElementById("loginModal").close();
           localStorage.setItem("user", JSON.stringify(res.data.user));
           navigate(from, { replace: true });

@@ -7,6 +7,7 @@ const notesXiSchema = mongoose.Schema({
   id: String,
   subject: String,
   link: String,
+  keywords: String,
   auth: String,
 });
 

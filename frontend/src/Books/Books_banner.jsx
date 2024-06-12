@@ -3,16 +3,20 @@ import logo_bl from "../assets/mold-skill-bl.png";
 import logo_wt from "../assets/mold-skill-wt.png";
 import Cards2 from "../components/Cards2";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const Books_banner = () => {
   const [metaData, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
+        const toastID = toast.loading("Loading Books...");
         const res = await axios.get("https://mold-s-kill-3-api.vercel.app/book");
         setBook(res.data);
+        toast.success("Loaded...", { id: toastID });
       } catch (error) {
         console.log("error", error);
+        toast.error("Failed to load book");
       }
     };
     getBook();

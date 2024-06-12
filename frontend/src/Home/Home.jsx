@@ -10,7 +10,6 @@ const Home = () => {
   }, []);
   return (
     <>
-      {alert("Website is under devlopment")}
       <Navbar />
       <Banner1 />
       <FreeBooks />

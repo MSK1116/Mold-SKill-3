@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
 const PdfViewer = () => {
   const location = useLocation();
   const items = location.state;
-  document.title = items.title + " By Mold Skill";
+  document.title = items.title ? items.title : items.name + " By Mold Skill";
   const file = items.link;
 
   const canvasRef = useRef(null);

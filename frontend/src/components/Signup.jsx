@@ -8,7 +8,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 function Signup() {
   const location = useLocation();
-
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const {
@@ -21,6 +20,7 @@ function Signup() {
       fullname: data.fullName,
       email: data.email,
       password: data.password,
+      clzname: data.clzname,
     };
     const toastId = toast.loading("Working...");
     await axios
@@ -39,7 +39,6 @@ function Signup() {
       .catch((err) => {
         if (err.response) {
           console.log(err);
-
           toast.error("ERROR: " + err.response.data.message, { id: toastId });
         }
       });
@@ -62,8 +61,9 @@ function Signup() {
               <input {...register("password", { required: true })} type="password" className="block border border-gray-300 bg-white w-full p-3 rounded mb-4" name="password" placeholder="Password" />
               {errors.password && <span className="text-sm text-red-500 ">This field is required</span>}
 
-              <input {...register("confirm_pwd", { required: true })} type="password" className="block border border-gray-300 bg-white w-full p-3 rounded mb-4" name="confirm_pwd" placeholder="Confirm Password" />
-              {errors.confirm_pwd && <span className="text-sm text-red-500 ">This field is required</span>}
+              <input {...register("clzname", { required: true })} type="text" className="block border border-gray-300 bg-white w-full p-3 rounded mb-4" name="clzname" placeholder="Institute for e.g (CCRC, Balkumari)" />
+              {errors.clzname && <span className="text-sm text-red-500 ">for e.g KMC, Lalitpur</span>}
+
               <button type="submit" className="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-600  focus:outline-none my-1">
                 Create Account
               </button>

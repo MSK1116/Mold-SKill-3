@@ -10,7 +10,9 @@ const Search = () => {
   const [results, setResults] = useState([]);
   const fetchData = async (value) => {
     try {
-      const toastID = toast.loading("Searching...");
+      const toastID = toast.loading("Loading...", {
+        position: "bottom-right",
+      });
       const notesXi = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
       const books = await axios.get("https://mold-s-kill-3-api.vercel.app/book");
       toast.remove(toastID);

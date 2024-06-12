@@ -10,9 +10,10 @@ const Search = () => {
   const [results, setResults] = useState([]);
   const fetchData = async (value) => {
     try {
+      const toastID = toast.loading("Searching...");
       const notesXi = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
       const books = await axios.get("https://mold-s-kill-3-api.vercel.app/book");
-
+      toast.remove(toastID);
       const allResult = [...notesXi.data, ...books.data];
       localStorage.setItem("allResultCash", JSON.stringify(allResult));
       const allResultCashString = localStorage.getItem("allResultCash");
@@ -54,7 +55,7 @@ const Search = () => {
       </label>
       <div className=" w-full z-100 bg-slate-200 rounded-md mt-3 overflow-y-scroll max-h-[300px] flex flex-col shadow-md">
         {results.length == 0 && input.length > 2 ? (
-          <div>No result found</div>
+          <div>No result found...</div>
         ) : (
           results.map((result, id) => {
             return (

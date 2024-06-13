@@ -15,7 +15,7 @@ const Faq = () => {
       <Navbar />
 
       <div className="max-w-screen-2xl container mx-auto md:px-20px px-4 flex flex-col ">
-        <section className=" bg-white">
+        <section className="w-screen bg-white">
           <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex  lg:items-center">
             <div className="mx-auto max-w-xl text-center">
               <h1 className="text-3xl font-extrabold sm:text-5xl">

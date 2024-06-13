@@ -6,6 +6,7 @@ import Testimonial from "./Testimonial";
 import Aboutus_banner1 from "./Aboutus_banner1";
 
 const Aboutus = () => {
+  document.title = "About us | Mold Skill";
   return (
     <>
       <Navbar />

@@ -1,6 +1,7 @@
 import React from "react";
 import logo_bl from "../assets/mold-skill-bl.png";
 import logo_wt from "../assets/mold-skill-wt.png";
+import Search from "../components/Search";
 
 const Subject_banner = ({ sub }) => {
   return (
@@ -13,12 +14,7 @@ const Subject_banner = ({ sub }) => {
               <img className="dark:hidden object-none align-baseline block  h-96 w-96 md:w-96 md:mt-10 md:ml-10 md:h-80 p-0 " src={logo_bl}></img>
               <h2 className="text-3xl font-bold sm:text-4xl">Practise</h2>
               <p className="mt-4 text-gray-600 dark:text-gray-300">"Notes are the anchors that tether our thoughts, turning fleeting ideas into lasting insights and laying the groundwork for future wisdom."</p>
-              <label className="input input-bordered bg-slate-50 dark:text-black flex mt-10 items-center gap-2">
-                <input type="text" className="grow" placeholder="Search for notes.." />
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70">
-                  <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" />
-                </svg>
-              </label>
+              <Search />
             </div>
             <div className=" md:mt-36">
               <svg className={`md:w-96 md:h-96 w-80 h-80 md:mx-36 md:my-28  dark:text-blue-700 text-gray-800 ${sub ? "hidden" : "block"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

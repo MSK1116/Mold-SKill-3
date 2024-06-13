@@ -1,8 +1,9 @@
 import React from "react";
 import logo_bl from "../assets/mold-skill-bl.png";
 import logo_wt from "../assets/mold-skill-wt.png";
-
+import { Navigate, useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <hr className="dark:hidden"></hr>
@@ -27,7 +28,13 @@ const Footer = () => {
           <h6 className="footer-title">More</h6>
           <a className="link link-hover">Contact Us</a>
           <a className="link link-hover">About Us</a>
-          <a className="link link-hover">FAQ</a>
+          <div
+            onClick={() => {
+              navigate("/faq");
+            }}
+            className="link link-hover">
+            FAQ
+          </div>
         </nav>
 
         <nav>

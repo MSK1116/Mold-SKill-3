@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const navigate = useNavigate();
-  const from = location.state?.from?.pathname || "/";
+  // const from = location.state?.from?.pathname || "/";
   const {
     register,
     handleSubmit,
@@ -26,7 +26,7 @@ const Login = () => {
           toast.success("Welcome To Mold Skill, you're logged in", { id: toastId });
           document.getElementById("loginModal").close();
           localStorage.setItem("user", JSON.stringify(res.data.user));
-          navigate(from, { replace: true });
+          //   navigate(from, { replace: true });
           setTimeout(() => {
             window.location.reload();
           }, 2000);

@@ -39,6 +39,7 @@ import Eng_xii_p from "./Practise/Eng_xii_p";
 import Mat_xii_p from "./Practise/Mat_xii_p";
 import Nepali_xii_p from "./Practise/Nepali_xii_p";
 import Phy_xii_p from "./Practise/Phy_xi_p";
+import Faq from "./FAQ/Faq";
 
 const App = () => {
   const [authUser, setAuthUser] = useAuth();
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/notes" element={<Notes />} />
           <Route path="/practise" element={<Practise />} />
           <Route path="/pdf" element={<Pdf />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/pdfA" element={authUser ? <PdfViewer /> : <Navigate to="/register" />} />
           <Route path="/register" element={authUser ? <Navigate to="/" /> : <Signup />} />
 

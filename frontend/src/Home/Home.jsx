@@ -8,6 +8,8 @@ const Home = () => {
   useEffect(() => {
     document.title = "Mold Skill";
   }, []);
+
+  alert("Website is under devlopment");
   return (
     <>
       <Navbar />

@@ -17,10 +17,7 @@ const contactSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  subject: {
-    type: String,
-    required: true,
-  },
+
   time: {
     type: Number,
   },

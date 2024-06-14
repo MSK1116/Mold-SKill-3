@@ -1,9 +1,9 @@
 import React from "react";
 
-const Testimonial = () => {
+const Testimonial = ({ sectionRef }) => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20px px-4 flex flex-col ">
+      <div ref={sectionRef} className="max-w-screen-2xl container mx-auto md:px-20px px-4 flex flex-col ">
         <section className="bg-white dark:bg-slate-800">
           <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <h2 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">Read trusted reviews from our users</h2>

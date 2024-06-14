@@ -1,133 +1,90 @@
-import React from "react";
+import React, { useRef } from "react";
+import Svg_study_time from "./Svg_study_time";
 import { useAuth } from "../context/Authprovider";
-import { Navigate, useNavigate } from "react-router-dom";
-const Aboutus_banner = () => {
-  const navigate = useNavigate();
+import { useNavigate } from "react-router-dom";
+
+const Aboutus_banner = ({ sectionRef }) => {
   const [authUser, setAuthUser] = useAuth();
-  console.log(useAuth);
+  const navigate = useNavigate();
+
+  const scrollToTesetimonial = () => {
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <div className="max-w-screen-2xl  container mx-auto md:px-20px px-4 flex flex-col ">
-        <section className="overflow-hidden my-6 sm:grid sm:grid-cols-2 sm:items-center">
-          <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-            <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-              <h1 className="text-2xl mt-8 flex flex-col font-extrabold sm:text-5xl">
-                We love
-                <strong className="font-extrabold text-red-700 sm:block"> FREE</strong>
-                <strong className="font-extrabold mt-3 text-blue-700 sm:block"> content </strong>
-              </h1>
+      <div className="max-w-screen-2xl   container mx-auto md:px-20px px-4 flex flex-col">
+        <div className="bg-white dark:bg-slate-800 relative my-9 flex items-center  n justify-center overflow-hidden ">
+          <div className="relative mx-auto h-full px-4  pb-20   md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
+            <div className="flex flex-col items-center justify-between lg:flex-row py-16">
+              <div className=" relative ">
+                <div className=" absolute top-0 -left-48 z-0  opacity-50 ">
+                  <img src="" className="w-36 z-0  h-full object-fill fill-y text-y "></img>
+                </div>
+                <div className="lg:max-w-xl lg:pr-5 relative z-40">
+                  <p className="flex text-sm uppercase text-g1  ">About Us</p>
+                  <h2 className="mb-6 max-w-lg text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
+                    We Love free
+                    <span className="my-1 inline-block border-b-8 border-g4 bg-white dark:bg-slate-800 px-4 font-bold text-g4 animate__animated animate__flash">CONTENT</span>
+                  </h2>
+                  <p className="text-base text-gray-700">Education is a right, not a privilege. It should be free and accessible to all, unlocking the doors of opportunity for everyone.</p>
+                  <div className="mt-10 flex flex-col items-center md:flex-row">
+                    {!authUser ? (
+                      <a
+                        onClick={() => navigate("/register")}
+                        className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-green-600 px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-blue-800 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+                        Sign up
+                      </a>
+                    ) : (
+                      ""
+                    )}
 
-              <div className="mt-4 md:mt-8">
-                {!authUser ? (
-                  <a
-                    onClick={() => {
-                      navigate("/register");
-                    }}
-                    className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                    Do you? Get Started Today
-                  </a>
-                ) : (
-                  ""
-                )}
+                    <a onClick={scrollToTesetimonial} aria-label="" className="group inline-flex items-center font-semibold text-g1">
+                      Show Review
+                      <svg xmlns="http://www.w3.org/2000/svg" className="ml-4 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="relative hidden lg:ml-32 lg:block lg:w-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="my-6 mx-auto h-10 w-10 animate-bounce rounded-full bg-white p-2 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path>
+                </svg>
+                <div className="abg-orange-400 mx-auto w-fit overflow-hidden rounded-[6rem] rounded-br-none rounded-tl-none">
+                  <Svg_study_time />
+                </div>
               </div>
             </div>
           </div>
+          <div className="hidden text-9xl varien absolute top-6 left-1/4 text-g/10 z-40    ">About Us</div>
+          <div className=" absolute -bottom-24 left-10 z-0  opacity-10 ">
+            <svg width="800px" height="800px" viewBox="0 0 24 24" className="w-96 z-0  h-full    object-fill fill-gray-300 text-gray-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M12 6C12 5.44772 11.5523 5 11 5C10.4477 5 10 5.44772 10 6V16C10 16.5523 10.4477 17 11 17C11.5523 17 12 16.5523 12 16V6ZM9 9C9 8.44772 8.55228 8 8 8C7.44772 8 7 8.44772 7 9V16C7 16.5523 7.44772 17 8 17C8.55228 17 9 16.5523 9 16V9ZM15 9C15 8.44772 14.5523 8 14 8C13.4477 8 13 8.44772 13 9V16C13 16.5523 13.4477 17 14 17C14.5523 17 15 16.5523 15 16V9ZM18 13C18 12.4477 17.5523 12 17 12C16.4477 12 16 12.4477 16 13V16C16 16.5523 16.4477 17 17 17C17.5523 17 18 16.5523 18 16V13ZM6 15C6 14.4477 5.55228 14 5 14C4.44772 14 4 14.4477 4 15V16C4 16.5523 4.44772 17 5 17C5.55228 17 6 16.5523 6 16V15ZM21 15C21 14.4477 20.5523 14 20 14C19.4477 14 19 14.4477 19 15V16C19 16.5523 19.4477 17 20 17C20.5523 17 21 16.5523 21 16V15ZM4 18C3.44772 18 3 18.4477 3 19C3 19.5523 3.44772 20 4 20H21C21.5523 20 22 19.5523 22 19C22 18.4477 21.5523 18 21 18H4Z"></path>
+            </svg>
+          </div>
 
-          {/* svg image */}
-          <svg
-            className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-            xmlns="http://www.w3.org/2000/svg"
-            data-name="Layer 1"
-            width="677"
-            height="421.44411"
-            viewBox="0 0 677 421.44411"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path
-              id="b8e1c32d-683f-4c0b-b143-7b79b01ef2c4-69"
-              data-name="Path 438"
-              d="M360.60136,612.13066a24.21459,24.21459,0,0,0,23.38269-4.11877c8.18977-6.87441,10.758-18.196,12.8467-28.68191l6.17973-31.01657-12.9377,8.90837c-9.30465,6.40641-18.81826,13.01866-25.26011,22.29785s-9.25223,21.94707-4.07792,31.988"
-              transform="translate(-261.5 -239.27794)"
-              fill="#e5e5e5"
-            />
-            <path
-              id="b345d9b4-9c4f-41f9-9568-a0ba3758b02e-70"
-              data-name="Path 439"
-              d="M362.59907,651.84122c-1.62839-11.86368-3.30382-23.88078-2.15884-35.87167,1.01467-10.64932,4.26373-21.0488,10.87831-29.57938a49.20628,49.20628,0,0,1,12.62466-11.44039c1.26215-.79647,2.42409,1.20354,1.16733,1.997a46.77949,46.77949,0,0,0-18.50446,22.32562c-4.02858,10.24607-4.67545,21.41582-3.98154,32.3003.41944,6.58218,1.31074,13.1212,2.20588,19.65251a1.19817,1.19817,0,0,1-.808,1.42251,1.16348,1.16348,0,0,1-1.42253-.808Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#f1f1f1"
-            />
-            <path
-              id="f718468a-ef9d-47fd-af88-cc844d7fba89-71"
-              data-name="Path 442"
-              d="M374.3201,632.80477a17.82511,17.82511,0,0,0,15.53141,8.01862c7.8644-.37318,14.41806-5.85973,20.31713-11.07027l17.452-15.4088-11.54987-.5528c-8.3062-.39784-16.82672-.771-24.73814,1.79338s-15.20757,8.72638-16.654,16.9154"
-              transform="translate(-261.5 -239.27794)"
-              fill="#e5e5e5"
-            />
-            <path
-              id="be0f511b-71c0-458c-8c37-97c17312c758-72"
-              data-name="Path 443"
-              d="M357.99609,658.66091c7.83972-13.87142,16.93234-29.28794,33.1808-34.21552a37.02588,37.02588,0,0,1,13.95545-1.441c1.48189.128,1.11179,2.41174-.367,2.28453a34.39833,34.39833,0,0,0-22.27164,5.89215c-6.27994,4.27454-11.16975,10.21756-15.30781,16.51907-2.53511,3.86051-4.80577,7.88445-7.07642,11.903C359.38391,660.88761,357.26208,659.96008,357.99609,658.66091Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#f1f1f1"
-            />
-            <polygon points="275.063 143.134 275.063 129.802 356.663 88.734 411.063 228.134 327.763 250.234 275.063 143.134" fill="#3f3d56" />
-            <polygon points="412.563 231.655 355.911 96.318 351.597 98.347 349.911 94.318 278.563 132.433 278.645 132.65 278.063 132.924 284.061 147.018 323.995 252.95 328.591 251.653 329.995 254.95 412.563 231.655" fill="#6563ff" />
-            <polygon points="329.995 253.95 412.563 230.655 355.91 95.318 278.063 131.924 329.995 253.95" opacity="0.1" />
-            <path
-              d="M636.43969,453.57862a6.92355,6.92355,0,0,1-3.92136-5.87326l-.76936-14.5645a6.92457,6.92457,0,0,1,6.54277-7.27282l121.392-6.4128a6.92457,6.92457,0,0,1,7.27271,6.54244l.76936,14.565a6.92473,6.92473,0,0,1-6.54255,7.27239l-121.39223,6.41324A6.876,6.876,0,0,1,636.43969,453.57862Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#6563ff"
-            />
-            <path
-              d="M720.122,453.864a6.93791,6.93791,0,0,1-3.91769-6.29177l-.14388-27.42231a6.91662,6.91662,0,0,1,6.97463-6.866l55.37914,4.8821c1.46594.00888,3.31643,2.28,4.80413,4.10312.46657.57237.86957,1.06651,1.16425,1.36561.12913.13116.25209.26739.36884.40651h0a6.90522,6.90522,0,0,1,1.61625,4.50249l-.12123,14.58387a6.92594,6.92594,0,0,1-6.97494,6.85995l-56.16442,4.558A6.97479,6.97479,0,0,1,720.122,453.864Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#2f2e41"
-            />
-            <circle cx="503.56685" cy="85.61051" r="52.88731" fill="#6563ff" />
-            <path
-              d="M754.75721,660.72206h-14.585a6.92513,6.92513,0,0,1-6.91735-6.91736V530.26694a6.92512,6.92512,0,0,1,6.91735-6.91736h14.585a6.92512,6.92512,0,0,1,6.91736,6.91736V653.8047A6.92513,6.92513,0,0,1,754.75721,660.72206Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#6563ff"
-            />
-            <path
-              d="M793.22874,660.72206h-14.585a6.92514,6.92514,0,0,1-6.91736-6.91736V530.26694a6.92513,6.92513,0,0,1,6.91736-6.91736h14.585a6.92512,6.92512,0,0,1,6.91736,6.91736V653.8047A6.92513,6.92513,0,0,1,793.22874,660.72206Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#6563ff"
-            />
-            <path
-              d="M735.68821,344.49026l-.055-1.97639c3.67678-.10229,6.91833-.33293,9.35407-2.11245a6.07541,6.07541,0,0,0,2.35323-4.47486,3.47285,3.47285,0,0,0-1.13922-2.86036c-1.61691-1.36552-4.21864-.92354-6.11493-.054l-1.63525.74983,3.13588-22.91665,1.958.26828-2.66735,19.49367c2.57664-.75755,4.96413-.43137,6.59938.9496a5.40639,5.40639,0,0,1,1.83839,4.43915,8.03666,8.03666,0,0,1-3.16242,6.00154C743.02343,344.28471,738.9563,344.39858,735.68821,344.49026Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#2f2e41"
-            />
-            <rect x="491.72865" y="73.51677" width="10.64432" height="1.97639" fill="#2f2e41" />
-            <rect x="458.13006" y="73.51677" width="10.64432" height="1.97639" fill="#2f2e41" />
-            <path
-              d="M825.32047,501.01789l-48.81475-97.34312h.68838a6.43049,6.43049,0,0,0,6.42323-6.42323v-1.97635a6.43056,6.43056,0,0,0-6.42323-6.42331H755.45388a6.43056,6.43056,0,0,0-6.42324,6.42331v1.97635a6.40975,6.40975,0,0,0,5.68517,6.34863l-48.95534,97.471a30.40462,30.40462,0,0,0,27.17028,44.051h65.16794A30.45288,30.45288,0,0,0,825.32047,501.01789Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#2f2e41"
-            />
-            <path
-              d="M757.10671,290.73358c-12.76012,8.75667-32.35719,3.9289-38.14032-10.86562a27.26564,27.26564,0,0,1,1.12493-22.39952c4.00182-7.51782,11.75377-12.02973,19.909-13.72035,10.9416-2.26824,22.25465.7769,32.25618,5.19974a1.98768,1.98768,0,0,0,2.25585-.29107c9.55315-7.61621,23.43318-4.30936,33.22825,1.01441a73.71409,73.71409,0,0,1,26.07958,24.6716,77.03153,77.03153,0,0,1,12.13812,33.825,77.209,77.209,0,0,1-30.133,68.57936c-1.896,1.41851-.04212,4.65209,1.87909,3.21475,21.0916-15.77951,33.73479-42.11152,32.239-68.50271-1.45863-25.73606-16.16883-50.53246-38.305-63.84691-11.74926-7.06695-28.12411-10.86367-39.75869-1.58805l2.25584-.29107c-10.00351-4.42372-20.96367-7.54639-31.9878-6.09571-9.36412,1.23223-18.56443,5.7225-23.9336,13.71967a30.63125,30.63125,0,0,0-3.66632,25.03,27.80971,27.80971,0,0,0,16.72685,18.343c8.9504,3.55189,19.71869,2.70305,27.71105-2.78174,1.9633-1.34731.10334-4.57519-1.87909-3.21474Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#2f2e41"
-            />
-            <polygon points="429.563 249.655 372.911 114.318 368.244 115.505 366.911 112.318 280.563 137.433 280.692 137.764 280.063 137.924 286.137 151.728 325.995 253.95 330.973 253.629 331.995 255.95 429.563 249.655" fill="#6563ff" />
-            <polygon points="331.163 270.634 430.563 249.433 375.363 117.634 275.063 143.134 331.163 270.634" fill="#3f3d56" />
-            <circle cx="341.56299" cy="167.43281" r="19" fill="#fff" />
-            <path
-              d="M756.49332,431.09717a6.95028,6.95028,0,0,1,2.10072.43108,6.86932,6.86932,0,0,1,3.88,3.60052l6.07361,13.26a6.92411,6.92411,0,0,1-3.40836,9.16932L654.61973,508.18019a6.92484,6.92484,0,0,1-9.16955-3.40861l-6.07361-13.26a6.9241,6.9241,0,0,1,3.40836-9.16931l110.51959-50.62207A6.87318,6.87318,0,0,1,756.49332,431.09717Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#6563ff"
-            />
-            <path
-              d="M758.58494,428.05526a6.9376,6.9376,0,0,1,6.0124,4.10408l5.93,13.32483a6.90427,6.90427,0,0,1,.31449,4.77306c-.05157.17391-.10991.348-.17613.52025h0c-.15058.39149-.32309,1.00514-.52256,1.71558-.63633,2.26578-1.42814,5.08562-2.80308,5.69739l-48.76216,26.53729a6.91378,6.91378,0,0,1-9.16722-3.48965l-10.81491-25.21423a6.924,6.924,0,0,1,3.50949-9.12645l53.40054-18.2614A6.77524,6.77524,0,0,1,758.58494,428.05526Z"
-              transform="translate(-261.5 -239.27794)"
-              fill="#2f2e41"
-            />
-            <path d="M937.5,660.71075h-381a1,1,0,0,1,0-2h381a1,1,0,0,1,0,2Z" transform="translate(-261.5 -239.27794)" fill="#3f3d56" />
-            <path d="M452.5,660.71075h-190a1,1,0,0,1,0-2h190a1,1,0,0,1,0,2Z" transform="translate(-261.5 -239.27794)" fill="#3f3d56" />
-          </svg>
-        </section>
+          <div className=" absolute -bottom-0 left-3/4 z-0  opacity-10 ">
+            <svg width="800px" height="800px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" className="w-48 z-0  h-full -rotate-90   object-fill fill-red-300 text-red-300">
+              <path
+                d="M32 225h12.993A4.004 4.004 0 0 0 49 220.997V138.01c0-4.976.724-5.04 1.614-.16l12.167 66.708c.397 2.177 2.516 3.942 4.713 3.942h8.512a3.937 3.937 0 0 0 3.947-4S79 127.5 80 129s14.488 52.67 14.488 52.67c.559 2.115 2.8 3.83 5.008 3.83h8.008a3.993 3.993 0 0 0 3.996-3.995v-43.506c0-4.97 1.82-5.412 4.079-.965l10.608 20.895c1.001 1.972 3.604 3.571 5.806 3.571h9.514a3.999 3.999 0 0 0 3.993-4.001v-19.49c0-4.975 2.751-6.074 6.155-2.443l6.111 6.518c1.51 1.61 4.528 2.916 6.734 2.916h7c2.21 0 5.567-.855 7.52-1.92l9.46-5.16c1.944-1.06 5.309-1.92 7.524-1.92h23.992a4.002 4.002 0 0 0 4.004-3.992v-7.516a3.996 3.996 0 0 0-4.004-3.992h-23.992c-2.211 0-5.601.823-7.564 1.834l-4.932 2.54c-4.423 2.279-12.028 3.858-16.993 3.527l2.97.198c-4.962-.33-10.942-4.12-13.356-8.467l-11.19-20.14c-1.07-1.929-3.733-3.492-5.939-3.492h-7c-2.21 0-4 1.794-4 4.001v19.49c0 4.975-1.14 5.138-2.542.382l-12.827-43.535c-.625-2.12-2.92-3.838-5.127-3.838h-8.008c-2.207 0-3.916 1.784-3.817 4.005l1.92 42.998c.221 4.969-.489 5.068-1.585.224l-15.13-66.825c-.488-2.155-2.681-3.902-4.878-3.902h-8.512a3.937 3.937 0 0 0-3.947 4s.953 77-.047 75.5-13.937-92.072-13.937-92.072C49.252 34.758 47.21 33 45 33H31.999"
+                fillRule="evenodd"></path>
+            </svg>
+          </div>
+          <div className=" absolute top-10 left-3/4 z-0  opacity-10 ">
+            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" className="w-96 z-0  h-full    object-fill fill-blue-300 text-blue-300">
+              <path
+                d="M230.704 99.2a4.004 4.004 0 0 0-4.01-3.995h-50.981c-2.215 0-5.212-1.327-6.693-2.964L155.289 77.08c-17.795-19.65-41.628-16.256-53.234 7.58l-38.736 79.557C60.42 170.172 52.705 175 46.077 175H29.359a3.996 3.996 0 0 0-3.994 3.995v10.01A4 4 0 0 0 29.372 193h24.7c8.835 0 19.208-6.395 23.174-14.293l43.645-86.914c3.964-7.894 12.233-9.228 18.473-2.974l17.184 17.219c3.123 3.13 9.242 5.667 13.647 5.667H226.7a4.005 4.005 0 0 0 4.004-3.994v-8.512z"
+                fillRule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
       </div>
     </>
   );

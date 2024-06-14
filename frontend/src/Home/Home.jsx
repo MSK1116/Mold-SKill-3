@@ -9,7 +9,6 @@ const Home = () => {
     document.title = "Mold Skill";
   }, []);
 
-  alert("Website is under devlopment");
   return (
     <>
       <Navbar />

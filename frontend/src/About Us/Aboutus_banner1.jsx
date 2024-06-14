@@ -28,9 +28,7 @@ const Aboutus_banner1 = () => {
                   <div className="mt-4 md:mx-4 md:mt-0">
                     <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Free of cost</h1>
 
-                    <p className="mt-3 text-gray-500 dark:text-gray-300">
-                      we believe in democratizing education. We provide unrestricted access to high-quality courses and resources because we are passionate about empowering everyone to learn and grow.
-                    </p>
+                    <p className="mt-3 text-gray-500 dark:text-gray-300">we believe in democratizing education. We provide unrestricted access to high-quality resources because we are passionate about empowering everyone to learn and grow.</p>
                   </div>
                 </div>
 
@@ -44,7 +42,7 @@ const Aboutus_banner1 = () => {
                   <div className="mt-4 md:mx-4 md:mt-0">
                     <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Easy Configrations</h1>
 
-                    <p className="mt-3 text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet</p>
+                    <p className="mt-3 text-gray-500 dark:text-gray-300">Easy Configurations offers a simple and intuitive user interface for effortless navigation and learning. Our easy login feature ensures quick and secure access,</p>
                   </div>
                 </div>
 
@@ -59,7 +57,10 @@ const Aboutus_banner1 = () => {
                   <div className="mt-4 md:mx-4 md:mt-0">
                     <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Content form trusted source</h1>
 
-                    <p className="mt-3 text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet</p>
+                    <p className="mt-3 text-gray-500 dark:text-gray-300">
+                      we prioritize content from trusted sources to ensure the highest quality learning experience. Our practice questions are sourced from previous board exams and reputable colleges, providing learners with reliable and relevant
+                      material.
+                    </p>
                   </div>
                 </div>
 
@@ -72,9 +73,12 @@ const Aboutus_banner1 = () => {
                   </span>
 
                   <div className="mt-4 md:mx-4 md:mt-0">
-                    <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">elegant Dark Mode</h1>
+                    <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Elegant Dark Mode</h1>
 
-                    <p className="mt-3 text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet</p>
+                    <p className="mt-3 text-gray-500 dark:text-gray-300">
+                      we understand the importance of user preference and eye comfort, which is why we offer an elegant dark mode option. Switching to dark mode not only enhances readability but also reduces eye strain, particularly during extended
+                      periods of learning.
+                    </p>
                   </div>
                 </div>
               </div>

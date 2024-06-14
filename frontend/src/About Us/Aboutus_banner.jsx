@@ -29,7 +29,7 @@ const Aboutus_banner = ({ sectionRef }) => {
                     We Love free
                     <span className="my-1 inline-block border-b-8 border-g4 bg-white dark:bg-slate-800 px-4 font-bold text-g4 animate__animated animate__flash">CONTENT</span>
                   </h2>
-                  <p className="text-base text-gray-700">Education is a right, not a privilege. It should be free and accessible to all, unlocking the doors of opportunity for everyone.</p>
+                  <p className="text-base text-gray-400">Education is a right, not a privilege. It should be free and accessible to all, unlocking the doors of opportunity for everyone.</p>
                   <div className="mt-10 flex flex-col items-center md:flex-row">
                     {!authUser ? (
                       <a

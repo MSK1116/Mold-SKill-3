@@ -7,7 +7,7 @@ export const contact = async (req, res) => {
   const time = `${formattedDate} ${formattedTime}`;
 
   try {
-    const { fullname, email, phnumber, address, message } = req.body;
+    const { fullname, email, phnumber, address, message, feedback } = req.body;
 
     if (!fullname || !email || !phnumber || !address || !message) {
       return res.status(400).json({ message: "All fields are required" });

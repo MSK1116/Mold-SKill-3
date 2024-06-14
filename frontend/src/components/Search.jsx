@@ -19,10 +19,20 @@ const Search = () => {
       const allResult = [...notesXi.data, ...books.data];
       localStorage.setItem("allResultCash", JSON.stringify(allResult));
       const allResultCashString = localStorage.getItem("allResultCash");
-
+      // practise = title & books = name
       const allResultCash = JSON.parse(allResultCashString);
+
+      const isSubsequence = (str, sub) => {
+        let strIndex = 0;
+        for (let i = 0; i < sub.length; i++) {
+          strIndex = str.toLowerCase().indexOf(sub[i].toLowerCase(), strIndex);
+          if (strIndex === -1) return false;
+          strIndex++;
+        }
+        return true;
+      };
       const result = allResultCash.filter((data) => {
-        return value.length > 2 && data && ((data.name && data.keywords.data && data.name.toLowerCase().includes(value)) || (data.keywords && data.keywords.toLowerCase().includes(value)));
+        return value.length > 2 && data && ((data.name && isSubsequence(data.name, value)) || (data.keywords && isSubsequence(data.keywords, value)));
       });
       setResults(result);
     } catch (error) {
@@ -34,8 +44,18 @@ const Search = () => {
     const allResultCashString = localStorage.getItem("allResultCash");
     const allResultCash = JSON.parse(allResultCashString);
 
+    const isSubsequence = (str, sub) => {
+      let strIndex = 0;
+      for (let i = 0; i < sub.length; i++) {
+        strIndex = str.toLowerCase().indexOf(sub[i].toLowerCase(), strIndex);
+        if (strIndex === -1) return false;
+        strIndex++;
+      }
+      return true;
+    };
+
     const result = allResultCash.filter((data) => {
-      return value.length > 2 && data && ((data.name && data.keywords && data.name.toLowerCase().includes(value)) || (data.keywords && data.keywords.toLowerCase().includes(value)));
+      return value.length > 2 && data && ((data.name && isSubsequence(data.name, value)) || (data.keywords && isSubsequence(data.keywords, value)));
     });
 
     setResults(result);
@@ -57,12 +77,12 @@ const Search = () => {
       </label>
       <div className=" w-full z-100 bg-slate-200 rounded-md mt-3 overflow-y-scroll max-h-[300px] flex flex-col shadow-md">
         {results.length == 0 && input.length > 2 ? (
-          <div>No result found...</div>
+          <div className="dark:bg-slate-600">No result found...</div>
         ) : (
           results.map((result, id) => {
             return (
               <div
-                className=" outline-none bg-white hover:bg-slate-300 dark:bg-slate-500 hover:dark:bg-slate-300 cursor-pointer border-none gap-y-6 p-2 rounded-sm shadow-md text-start"
+                className=" outline-none bg-white hover:bg-slate-300 dark:bg-slate-500 hover:dark:bg-slate-700  cursor-pointer border-none gap-y-6 p-2 rounded-sm shadow-md text-start"
                 onClick={() => {
                   navigate("/pdfA", { state: result });
                 }}

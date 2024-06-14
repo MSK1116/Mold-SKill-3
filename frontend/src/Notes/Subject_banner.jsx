@@ -2,6 +2,7 @@ import React from "react";
 import logo_bl from "../assets/mold-skill-bl.png";
 import logo_wt from "../assets/mold-skill-wt.png";
 import Search from "../components/Search";
+import Svg_girl_taking_notes from "../SVG/Svg_girl_taking_notes";
 
 const Subject_banner = ({ sub }) => {
   return (
@@ -12,14 +13,17 @@ const Subject_banner = ({ sub }) => {
             <div className="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
               <img className="dark:block object-none hidden  h-96 w-96 md:w-96 md:mt-10 md:ml-10 md:h-80 p-0" src={logo_wt}></img>
               <img className="dark:hidden object-none align-baseline block  h-96 w-96 md:w-96 md:mt-10 md:ml-10 md:h-80 p-0 " src={logo_bl}></img>
-              <h2 className="text-3xl font-bold sm:text-4xl">{}</h2>
+              <h2 className="text-3xl font-bold sm:text-4xl">Notes</h2>
               <p className="mt-4 text-gray-600 dark:text-gray-300">"Notes are the anchors that tether our thoughts, turning fleeting ideas into lasting insights and laying the groundwork for future wisdom."</p>
               <Search />
             </div>
-            <div className=" md:mt-36">
-              <svg className={`md:w-96 md:h-96 w-80 h-80 md:mx-36 md:my-28  dark:text-blue-700 text-gray-800 ${sub ? "hidden" : "block"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <div className=" ">
+              {/* <svg className={`md:w-96 md:h-96 w-80 h-80 md:mx-36 md:my-28  dark:text-blue-700 text-gray-800 ${sub ? "hidden" : "block"}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.3" d="M10 3v4a1 1 0 0 1-1 1H5m14-4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z" />
-              </svg>
+              </svg> */}
+              <div className={`${sub ? "hidden" : "block"}`}>
+                <Svg_girl_taking_notes />
+              </div>
               {/* chemistry */}
               <div className={`grid gap-4 mt-3 grid-cols-1 md:grid-cols-3 ${sub == "chem" ? "block" : "hidden"} `}>
                 <a className="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-blue-400 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring  hover:scale-105  duration-200 " href="">

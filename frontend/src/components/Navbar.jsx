@@ -2,21 +2,23 @@ import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import { useAuth } from "../context/Authprovider";
 import Profile from "./Profile";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const navList = (
     <>
       <li>
-        <a href="/">Home</a>
+        <a onClick={() => navigate("/")}>Home</a>
       </li>
       <li>
-        <a href="/books">Books</a>
+        <a onClick={() => navigate("/books")}>Books</a>
       </li>
       <li>
-        <a href="/practise">Practise</a>
+        <a onClick={() => navigate("/practise")}>Practise</a>
       </li>
       <li>
-        <a href="/notes">Notes</a>
+        <a onClick={() => navigate("/notes")}>Notes</a>
       </li>
     </>
   );

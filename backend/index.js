@@ -6,6 +6,7 @@ import cors from "cors";
 import bookRoute from "../backend/route/book.route.js";
 import userRoute from "../backend/route/user.route.js";
 import notesRoute from "../backend/route/notesxi.route.js";
+import contactRoute from "../backend/route/contact.route.js";
 
 const app = express();
 app.use(cors());
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
 app.use("/book", bookRoute);
 app.use("/notesxi", notesRoute);
 app.use("/user", userRoute);
+app.use("/contact", contactRoute);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

@@ -11,6 +11,7 @@ function Signup() {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,

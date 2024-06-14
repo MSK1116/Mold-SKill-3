@@ -1,5 +1,5 @@
 import React from "react";
-import Svg_reading_e_book from "./Svg_reading_e_book";
+import Svg_reading_e_book from "../SVG/Svg_reading_e_book";
 
 const Aboutus_banner1 = () => {
   return (

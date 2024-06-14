@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Svg_study_time from "./Svg_study_time";
+import Svg_study_time from "../SVG/Svg_study_time";
 import { useAuth } from "../context/Authprovider";
 import { useNavigate } from "react-router-dom";
 

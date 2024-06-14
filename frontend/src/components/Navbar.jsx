@@ -20,6 +20,9 @@ const Navbar = () => {
       <li>
         <a onClick={() => navigate("/notes")}>Notes</a>
       </li>
+      <li>
+        <a onClick={() => navigate("/about_us")}>About us</a>
+      </li>
     </>
   );
   const [authUser, setAuthUser] = useAuth();
@@ -74,7 +77,11 @@ const Navbar = () => {
                 {navList}
               </ul>
             </div>
-            <a href="/" className="font-bold cursor-pointer text-xl">
+            <a
+              onClick={() => {
+                navigate("/");
+              }}
+              className="font-bold cursor-pointer text-xl">
               Mold Skill
             </a>
           </div>

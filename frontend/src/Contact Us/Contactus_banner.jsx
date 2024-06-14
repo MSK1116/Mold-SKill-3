@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-number-input";
 import Footer from "../components/Footer";
 
 const Contactus_banner = () => {
+  const [submitFlag, setSubmitFlag] = useState(false);
   const {
     register,
     handleSubmit,
@@ -14,6 +15,8 @@ const Contactus_banner = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    const toastID = toast.loading("Sending...");
+    setSubmitFlag(true);
     const messageTo = {
       fullname: data.fullname,
       email: data.email,
@@ -27,14 +30,16 @@ const Contactus_banner = () => {
       .post("https://mold-s-kill-3-api.vercel.app/contact", messageTo)
       .then((res) => {
         if (res.data) {
-          toast.success("Message was sent to Mold Skill ");
+          setSubmitFlag(false);
+          toast.success("Message was sent to Mold Skill ", { id: toastID });
         }
       })
       .catch((err) => {
+        setSubmitFlag(false);
         if (err.response && err.response.data) {
-          toast.error("ERROR: msk " + err.response.data.message);
+          toast.error("ERROR: msk " + err.response.data.message, { id: toastID });
         } else {
-          toast.error("An unexpected error occurred. Please try again later.");
+          toast.error("An unexpected error occurred. Please try again later.", { id: toastID });
         }
       });
   };
@@ -167,7 +172,7 @@ const Contactus_banner = () => {
                   </a>
                 </p>
 
-                <button type="submit" className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white">
+                <button type="submit" className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" disabled={submitFlag}>
                   Submit
                 </button>
               </div>

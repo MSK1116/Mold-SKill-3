@@ -3,7 +3,7 @@ import React from "react";
 const Svg_teaching_e_mc = () => {
   return (
     <>
-      <svg className=" w-full h-52 my-5 md:h-auto" xmlns="http://www.w3.org/2000/svg" id="a" width="865.76" height="682.89" viewBox="0 0 865.76 682.89">
+      <svg className=" w-full h-52 my-5 md:h-auto hover:scale-105 duration-1000 transition-all" xmlns="http://www.w3.org/2000/svg" id="a" width="865.76" height="682.89" viewBox="0 0 865.76 682.89">
         <rect x="180.37" y="51.07" width="502.31" height="326.46" fill="#a993fb" stroke="#002346" strokeMiterlimit="10"></rect>
         <rect x="194.04" y="65.17" width="474.96" height="298.27" fill="#fff" stroke="#002346" strokeMiterlimit="10"></rect>
         <rect x="169.91" y="377.53" width="523.23" height="19.47" fill="#e6e7e8" stroke="#002346" strokeMiterlimit="10"></rect>

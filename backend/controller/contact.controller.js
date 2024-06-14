@@ -4,7 +4,7 @@ export const contact = async (req, res) => {
   const date = new Date();
   const time = date.getTime();
   try {
-    const { fullname, email, phnumber, address, subject, message } = req.body;
+    const { fullname, email, phnumber, address, message } = req.body;
     const createdMessage = new Contact({
       fullname: fullname,
       email: email,

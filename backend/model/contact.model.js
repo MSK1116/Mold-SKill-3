@@ -23,7 +23,6 @@ const contactSchema = mongoose.Schema({
   },
   time: {
     type: String,
-    required: true,
   },
 });
 

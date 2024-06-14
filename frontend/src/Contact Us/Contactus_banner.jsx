@@ -13,10 +13,8 @@ const Contactus_banner = () => {
     formState: { errors },
   } = useForm();
 
-  const [phnumber, setValue] = useState();
-
   const onSubmit = async (data) => {
-    const message = {
+    const messageTo = {
       fullname: data.fullname,
       email: data.email,
       phnumber: data.phnumber,
@@ -26,16 +24,17 @@ const Contactus_banner = () => {
     };
 
     await axios
-      .post("https://mold-s-kill-3-api.vercel.app/contact", message)
+      .post("https://mold-s-kill-3-api.vercel.app/contact", messageTo)
       .then((res) => {
         if (res.data) {
           toast.success("Message was sent to Mold Skill ");
         }
       })
       .catch((err) => {
-        if (err.response) {
-          console.log(err);
-          toast.error("ERROR: " + err.response.data.message);
+        if (err.response && err.response.data) {
+          toast.error("ERROR: msk " + err.response.data.message);
+        } else {
+          toast.error("An unexpected error occurred. Please try again later.");
         }
       });
   };
@@ -53,11 +52,11 @@ const Contactus_banner = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="mx-auto mb-0 mt-8 max-w-md space-y-4">
               <div>
                 <label htmlFor="name" className="sr-only">
-                  Email
+                  Name
                 </label>
 
                 <div className="relative">
-                  <input {...register("fullname", { required: true })} type="text" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" placeholder="Fullname" />
+                  <input {...register("fullname", { required: true })} type="text" className="w-full rounded-lg border-gray-200 bg-slate-200 p-4 pe-12 text-sm shadow-sm" placeholder="Fullname" />
                   {errors.fullname && <span className="text-sm text-red-500 ">This field is required (for e.g Manish Singh)</span>}
                   <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
                     <svg className="size-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +76,7 @@ const Contactus_banner = () => {
                 </label>
 
                 <div className="relative">
-                  <input {...register("email", { required: true })} type="email" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" placeholder="Email" />
+                  <input {...register("email", { required: true })} type="email" className="w-full rounded-lg border-gray-200 bg-slate-200 p-4 pe-12 text-sm shadow-sm" placeholder="Email" />
                   {errors.email && <span className="text-sm text-red-500 ">for e.g name@msmahato.com.np</span>}
 
                   <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -99,7 +98,7 @@ const Contactus_banner = () => {
                   Phone Number
                 </label>
                 <div className="relative">
-                  <input {...register("phnumber", { required: true })} type="text" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" placeholder="+977 9812055XXX" max={13} />
+                  <input {...register("phnumber", { required: true })} type="text" className="w-full rounded-lg border-gray-200 bg-slate-200 p-4 pe-12 text-sm shadow-sm" placeholder="+977 9812055XXX" max={13} />
                   {errors.phnumber && <span className="text-sm text-red-500 ">for e.g +977 9812055XXX, max 13 character</span>}
 
                   <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -121,7 +120,7 @@ const Contactus_banner = () => {
                   Adress
                 </label>
                 <div className="relative">
-                  <input {...register("address", { required: true })} type="text" className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" placeholder="Address" max={40} />
+                  <input {...register("address", { required: true })} type="text" className="w-full rounded-lg border-gray-200 bg-slate-200 p-4 pe-12 text-sm shadow-sm" placeholder="Address" max={40} />
                   {errors.address && <span className="text-sm text-red-500 ">for e.g Balkumari, Kathmandu max 40 character</span>}
 
                   <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -143,8 +142,8 @@ const Contactus_banner = () => {
                   Message
                 </label>
                 <div className="relative">
-                  <textarea {...register("message", { required: true })} className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" placeholder="Message" rows="8" id="message"></textarea>
-                  {errors.mesage && <span className="text-sm text-red-500 ">for e.g Balkumari, Kathmandu max 40 character</span>}
+                  <textarea {...register("message", { required: true })} className="w-full rounded-lg border-gray-200 bg-slate-200 p-4 pe-12 text-sm shadow-sm" placeholder="Message" rows="8" id="message" maxLength={400}></textarea>
+                  {errors.message && <span className="text-sm text-red-500 ">Type within 400 character</span>}
 
                   <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
                     <svg className="size-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -180,7 +179,9 @@ const Contactus_banner = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <div className="md:mt-96">
+        <Footer />
+      </div>
     </>
   );
 };

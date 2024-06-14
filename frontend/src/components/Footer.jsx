@@ -21,8 +21,8 @@ const Footer = () => {
           <p className="">
             Mold Skill <small>web</small>
             <br />
-            Crafted By:{" "}
-            <a className="link" href="https://manishmahato.info.np">
+            Crafted By:
+            <a className="link" target="blank" href="https://manishmahato.info.np">
               Manish Singh Mahato
             </a>
           </p>

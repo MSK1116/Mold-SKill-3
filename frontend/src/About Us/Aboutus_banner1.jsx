@@ -28,7 +28,9 @@ const Aboutus_banner1 = () => {
                   <div className="mt-4 md:mx-4 md:mt-0">
                     <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">Free of cost</h1>
 
-                    <p className="mt-3 text-gray-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet</p>
+                    <p className="mt-3 text-gray-500 dark:text-gray-300">
+                      we believe in democratizing education. We provide unrestricted access to high-quality courses and resources because we are passionate about empowering everyone to learn and grow.
+                    </p>
                   </div>
                 </div>
 

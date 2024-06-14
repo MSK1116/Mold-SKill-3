@@ -4,7 +4,7 @@ const Svg_contactus = () => {
   return (
     <>
       <div>
-        <svg className="absolute inset-0 h-full w-full object-cover" xmlns="http://www.w3.org/2000/svg" id="a" width="865.76" height="682.89" viewBox="0 0 865.76 682.89">
+        <svg className="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-all duration-1000" xmlns="http://www.w3.org/2000/svg" id="a" width="865.76" height="682.89" viewBox="0 0 865.76 682.89">
           <g>
             <g>
               <path

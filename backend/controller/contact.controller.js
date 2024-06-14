@@ -2,7 +2,9 @@ import Contact from "../model/contact.model.js";
 
 export const contact = async (req, res) => {
   const date = new Date();
-  const time = date.getTime();
+  const formattedDate = date.toLocaleDateString();
+  const formattedTime = date.toLocaleTimeString();
+  const time = `${formattedDate} ${formattedTime}`;
 
   try {
     const { fullname, email, phnumber, address, message } = req.body;

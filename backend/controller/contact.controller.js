@@ -19,6 +19,7 @@ export const contact = async (req, res) => {
       phnumber: phnumber,
       address: address,
       message: message,
+      feedback: feedback,
       time: time,
     });
 

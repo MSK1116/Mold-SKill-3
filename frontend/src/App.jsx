@@ -9,6 +9,9 @@ import Pdf from "./components/Pdf";
 import PdfViewer from "./components/PdfViewer";
 import Signup from "./components/Signup";
 import { useAuth } from "./context/Authprovider";
+import Faq from "./FAQ/Faq";
+import Aboutus from "./About Us/Aboutus";
+import Contactus from "./Contact Us/Contactus";
 
 import Chem_xi from "./Notes/Chem_xi";
 import Comp_xi from "./Notes/Comp_xi";
@@ -39,9 +42,6 @@ import Eng_xii_p from "./Practise/Eng_xii_p";
 import Mat_xii_p from "./Practise/Mat_xii_p";
 import Nepali_xii_p from "./Practise/Nepali_xii_p";
 import Phy_xii_p from "./Practise/Phy_xi_p";
-import Faq from "./FAQ/Faq";
-import Aboutus from "./About Us/Aboutus";
-import Contactus from "./Contact Us/Contactus";
 
 const App = () => {
   const [authUser, setAuthUser] = useAuth();
@@ -56,7 +56,8 @@ const App = () => {
           <Route path="/pdf" element={<Pdf />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/about_us" element={<Aboutus />} />
-          <Route path="/contact" element={authUser ? <Contactus /> : <Signup />} />
+
+          <Route path="/contact" element={<Contactus />} />
           <Route path="/pdfA" element={authUser ? <PdfViewer /> : <Navigate to="/register" />} />
           <Route path="/register" element={authUser ? <Navigate to="/" /> : <Signup />} />
 

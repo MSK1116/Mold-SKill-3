@@ -20,6 +20,9 @@ const contactSchema = mongoose.Schema({
   time: {
     type: String,
   },
+  feedback: {
+    type: String,
+  },
   message: {
     type: String,
     required: true,

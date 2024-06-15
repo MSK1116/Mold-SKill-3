@@ -8,6 +8,8 @@ const Faq = () => {
   const user = localStorage.getItem("user");
   const userInfo = JSON.parse(user);
   console.log(userInfo);
+  document.title = "FAQ | Mold Skill";
+  document.querySelector('meta[name="description"]').content = "Some frequently asked by our users";
 
   document.title = "FAQ | Mold Skill";
   return (

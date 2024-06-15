@@ -8,6 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import Svg_teaching_e_mc from "../SVG/Svg_teaching_e_mc";
 function Signup() {
+  document.title = "Signup | Mold Skill";
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();

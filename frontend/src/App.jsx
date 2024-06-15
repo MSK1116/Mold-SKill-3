@@ -42,6 +42,7 @@ import Eng_xii_p from "./Practise/Eng_xii_p";
 import Mat_xii_p from "./Practise/Mat_xii_p";
 import Nepali_xii_p from "./Practise/Nepali_xii_p";
 import Phy_xii_p from "./Practise/Phy_xi_p";
+import Error from "./components/Error";
 
 const App = () => {
   const [authUser, setAuthUser] = useAuth();
@@ -56,7 +57,7 @@ const App = () => {
           <Route path="/pdf" element={<Pdf />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/about_us" element={<Aboutus />} />
-
+          <Route path="*" element={<Error />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/pdfA" element={authUser ? <PdfViewer /> : <Navigate to="/register" />} />
           <Route path="/register" element={authUser ? <Navigate to="/" /> : <Signup />} />

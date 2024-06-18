@@ -132,7 +132,7 @@ const Navbar = () => {
               {authUser ? (
                 <Profile />
               ) : (
-                <a onClick={() => document.getElementById("loginModal").showModal()} className="btn bg-blue-700 hover:bg-blue-500 text-white">
+                <a onClick={() => document.getElementById("loginModal").showModal()} className="btn bt bg-blue-700 hover:bg-blue-500 text-white">
                   Login
                 </a>
               )}

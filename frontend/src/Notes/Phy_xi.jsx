@@ -25,9 +25,9 @@ const Phy_xi = () => {
     };
     getNotesXiChem();
   }, []);
-  const filterData = notes_list.filter((data) => data.title == "Physics");
+  const filterData = notes_list.filter((data) => data.subject == "Physics");
 
-  document.title = "Physics-XI By Mold Skill";
+  document.title = "Physics Notes-XI By Mold Skill";
 
   return (
     <>

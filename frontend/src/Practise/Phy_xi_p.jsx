@@ -31,7 +31,7 @@ const Phy_xi_p = () => {
   }, []);
   const filterData = notes_list.filter((data) => data.subject == "Physics");
 
-  document.title = "Physics-XI By Mold Skill";
+  document.title = "Physics  Practise-XI By Mold Skill";
 
   return (
     <>

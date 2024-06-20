@@ -32,7 +32,7 @@ const Eng_xi_p = () => {
 
   const filterData = notes_list.filter((data) => data.subject == "English");
 
-  document.title = "English-XI By Mold Skill";
+  document.title = "English  Practise-XI By Mold Skill";
 
   return (
     <>

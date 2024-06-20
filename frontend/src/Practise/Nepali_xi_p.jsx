@@ -31,7 +31,7 @@ const Nepali_xi_p = () => {
 
   const filterData = notes_list.filter((data) => data.subject == "Nepali");
 
-  document.title = "Nepali-XI By Mold Skill";
+  document.title = "Nepali  Practise-XI By Mold Skill";
 
   return (
     <>

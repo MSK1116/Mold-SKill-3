@@ -30,7 +30,7 @@ const Comp_xi_p = () => {
 
   const filterData = notes_list.filter((data) => data.subject == "Computer");
 
-  document.title = "Computer-XI By Mold Skill";
+  document.title = "Computer  Practise-XI By Mold Skill";
   const sub = "comp";
   return (
     <>

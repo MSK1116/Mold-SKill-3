@@ -31,7 +31,7 @@ const Chem_xi_p = () => {
 
   const filterData = notes_list.filter((data) => data.subject == "Chemistry");
 
-  document.title = "Chemistry-XI By Mold Skill";
+  document.title = "Chemistry  Practise-XI By Mold Skill";
   const sub = "chem";
   return (
     <>

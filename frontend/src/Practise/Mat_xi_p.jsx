@@ -30,7 +30,7 @@ const Mat_xi_p = () => {
 
   const filterData = notes_list.filter((data) => data.subject == "Mathematics");
 
-  document.title = "Math-XI By Mold Skill";
+  document.title = "Math  Practise-XI By Mold Skill";
 
   return (
     <>

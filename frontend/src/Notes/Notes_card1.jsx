@@ -62,7 +62,7 @@ const Notes_card1 = ({ items }) => {
         <div className="mt-2">
           <dl>
             <div>
-              <dd className="font-medium">SET:{items.set}</dd>
+              <dd className="font-medium">{items.title}</dd>
             </div>
           </dl>
 
@@ -78,8 +78,8 @@ const Notes_card1 = ({ items }) => {
               </svg>
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Type</p>
-                <p className="font-medium">{items.type}</p>
+                <p className="text-gray-500">Provider</p>
+                <p className="font-medium">{items.provider}</p>
               </div>
             </div>
 

@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 // define route
 
 app.use("/book", bookRoute);
-app.use("/notesxi", notesRoute);
+app.use("/practisexi", notesRoute);
 app.use("/user", userRoute);
 app.use("/contact", contactRoute);
 

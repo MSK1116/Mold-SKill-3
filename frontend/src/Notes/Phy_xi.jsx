@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Subject_banner from "./Subject_banner";
-import notes_list from "../../public/notes_list.json";
+import axios from "axios";
+import toast from "react-hot-toast";
 import Notes_card1 from "./Notes_card1";
 const Phy_xi = () => {
+  const [notes_list, setNotesXi] = useState([]);
+  useEffect(() => {
+    const toastID = toast.loading("Loading...", {
+      position: "top-center",
+    });
+    const getNotesXiChem = async () => {
+      try {
+        const res = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
+        toast.success("Loaded...", { duration: 3000, id: toastID });
+        setNotesXi(res.data);
+      } catch (error) {
+        console.log("error", error);
+        toast.error("Failed to fetch", { id: toastID });
+      } finally {
+        toast.remove(toastID);
+      }
+    };
+    getNotesXiChem();
+  }, []);
   const filterData = notes_list.filter((data) => data.id > 0);
 
   document.title = "Physics-XI By Mold Skill";

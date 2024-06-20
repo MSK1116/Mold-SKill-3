@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 import pdfjsLib from "../pdfjsLib"; // Import pdfjsLib
 
 const Notes_card1 = ({ items }) => {
   const navigate = useNavigate();
   const [thumbnail, setThumbnail] = useState(null);
+  const [totalPages, setTotalPages] = useState(0); // New state to store total pages
 
   const generateThumbnail = async (pdfUrl) => {
     try {
-      const loadingTask = pdfjsLib.getDocument(pdfUrl); // Use pdfjsLib here
+      const loadingTask = pdfjsLib.getDocument(pdfUrl);
       const pdf = await loadingTask.promise;
       const page = await pdf.getPage(1);
+      const total = pdf.numPages; // Get total number of pages
+
+      setTotalPages(total); // Update total pages state
 
       const viewport = page.getViewport({ scale: 1 });
       const canvas = document.createElement("canvas");
@@ -34,7 +37,6 @@ const Notes_card1 = ({ items }) => {
       return null;
     }
   };
-
   useEffect(() => {
     const loadThumbnail = async () => {
       const thumb = await generateThumbnail(items.link);
@@ -60,7 +62,7 @@ const Notes_card1 = ({ items }) => {
         <div className="mt-2">
           <dl>
             <div>
-              <dd className="font-medium">{items.title}</dd>
+              <dd className="font-medium">SET:{items.set}</dd>
             </div>
           </dl>
 
@@ -70,15 +72,14 @@ const Notes_card1 = ({ items }) => {
                 <path
                   stroke="currentColor"
                   strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.8"
-                  d="m4.988 19.012 5.41-5.41m2.366-6.424 4.058 4.058-2.03 5.41L5.3 20 4 18.701l3.355-9.494 5.41-2.029Zm4.626 4.625L12.197 6.61 14.807 4 20 9.194l-2.61 2.61Z"
+                  strokeWidth="2"
+                  d="M8.737 8.737a21.49 21.49 0 0 1 3.308-2.724m0 0c3.063-2.026 5.99-2.641 7.331-1.3 1.827 1.828.026 6.591-4.023 10.64-4.049 4.049-8.812 5.85-10.64 4.023-1.33-1.33-.736-4.218 1.249-7.253m6.083-6.11c-3.063-2.026-5.99-2.641-7.331-1.3-1.827 1.828-.026 6.591 4.023 10.64m3.308-9.34a21.497 21.497 0 0 1 3.308 2.724m2.775 3.386c1.985 3.035 2.579 5.923 1.248 7.253-1.336 1.337-4.245.732-7.295-1.275M14 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
                 />
               </svg>
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Writer</p>
-                <p className="font-medium">{items.provider}</p>
+                <p className="text-gray-500">Type</p>
+                <p className="font-medium">{items.type}</p>
               </div>
             </div>
 
@@ -88,14 +89,14 @@ const Notes_card1 = ({ items }) => {
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="1.9"
-                  d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"
+                  strokeWidth="2"
+                  d="M19 7h1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h11.5M7 14h6m-6 3h6m0-10h.5m-.5 3h.5M7 7h3v3H7V7Z"
                 />
               </svg>
 
               <div className="mt-1.5 sm:mt-0">
-                <p className="text-gray-500">Published Date</p>
-                <p className="font-medium">{items.date}</p>
+                <p className="text-gray-500">Pages</p>
+                <p className="font-medium">{totalPages ? totalPages : "..."}</p>
               </div>
             </div>
           </div>

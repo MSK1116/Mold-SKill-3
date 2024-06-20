@@ -15,7 +15,7 @@ const Comp_xi_p = () => {
     const getNotesXiComp = async () => {
       try {
         toast.loading("Loading...", { id: toastID });
-        const res = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
+        const res = await axios.get("https://mold-s-kill-3-api.vercel.app/practisexi");
         toast.success("Loaded...", { duration: 3000, id: toastID });
         setNotesXi(res.data);
       } catch (error) {

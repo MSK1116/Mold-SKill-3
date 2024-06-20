@@ -13,7 +13,7 @@ const Subject_banner = ({ sub }) => {
               <img className="dark:block object-none hidden  h-96 w-96 md:w-96 md:mt-10 md:ml-10 md:h-80 p-0" src={logo_wt}></img>
               <img className="dark:hidden object-none align-baseline block  h-96 w-96 md:w-96 md:mt-10 md:ml-10 md:h-80 p-0 " src={logo_bl}></img>
               <h2 className="text-3xl font-bold sm:text-4xl">Practise</h2>
-              <p className="mt-4 text-gray-600 dark:text-gray-300">"Notes are the anchors that tether our thoughts, turning fleeting ideas into lasting insights and laying the groundwork for future wisdom."</p>
+              <p className="mt-4 text-gray-600 dark:text-gray-300">Practice is the bridge between effort and mastery, turning persistence into progress and mistakes into milestones.</p>
               <Search />
             </div>
             <div className=" md:mt-36">

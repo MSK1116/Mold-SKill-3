@@ -167,7 +167,6 @@ const PdfViewer = () => {
             setPageCache((prevCache) => ({ ...prevCache, [nextPageNumber]: nextCanvas }));
           }
           toast.dismiss();
-          toast.success("Page loaded");
         }
       };
 

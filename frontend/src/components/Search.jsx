@@ -14,9 +14,11 @@ const Search = () => {
         position: "bottom-right",
       });
       const notesXi = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
+      const practiseXi = await axios.get("https://mold-s-kill-3-api.vercel.app/practisexi");
       const books = await axios.get("https://mold-s-kill-3-api.vercel.app/book");
+
       toast.remove(toastID);
-      const allResult = [...notesXi.data, ...books.data];
+      const allResult = [...notesXi.data, ...books.data, ...practiseXi.data];
       localStorage.setItem("allResultCash", JSON.stringify(allResult));
       const allResultCashString = localStorage.getItem("allResultCash");
       // practise = title & books = name

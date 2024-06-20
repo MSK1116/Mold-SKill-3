@@ -40,6 +40,7 @@ const Notes_card1 = ({ items }) => {
   useEffect(() => {
     const loadThumbnail = async () => {
       const thumb = await generateThumbnail(items.link);
+      console.log(items.link);
       if (thumb !== null) {
         setThumbnail(thumb);
       }

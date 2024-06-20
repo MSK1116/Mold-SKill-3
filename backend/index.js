@@ -7,6 +7,7 @@ import bookRoute from "../backend/route/book.route.js";
 import userRoute from "../backend/route/user.route.js";
 import notesRoute from "../backend/route/notesxi.route.js";
 import contactRoute from "../backend/route/contact.route.js";
+import practiseRoute from "../backend/route/practisexi.route.js";
 
 const app = express();
 app.use(cors());
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {
 
 app.use("/book", bookRoute);
 app.use("/practisexi", notesRoute);
+app.use("/notesxi", practiseRoute);
 app.use("/user", userRoute);
 app.use("/contact", contactRoute);
 

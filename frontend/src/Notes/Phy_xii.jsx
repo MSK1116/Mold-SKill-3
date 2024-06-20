@@ -5,7 +5,7 @@ import Subject_banner from "./Subject_banner";
 import notes_list from "../../public/notes_list.json";
 import Notes_card1 from "./Notes_card1";
 const Phy_xii = () => {
-  const filterData = notes_list.filter((data) => data.id > 0);
+  const filterData = notes_list.filter((data) => data.title == "Physics");
 
   document.title = "Physics-XII By Mold Skill";
 

@@ -16,8 +16,8 @@ const Error = () => {
             <div className="relative">
               <div className="absolute">
                 <div className="">
-                  <h1 className="my-2 text-gray-800 font-bold text-2xl">Looks like you've found the doorway to the great nothing</h1>
-                  <p className="my-2 text-gray-800">Sorry about that! It seems we don't have this that you are loking on this link.</p>
+                  <h1 className="my-2 text-gray-800 dark:text-gray-200 font-bold text-2xl">Looks like you've found the doorway to the great nothing</h1>
+                  <p className="my-2 text-gray-800 dark:text-gray-200">Sorry about that! It seems we don't have this that you are loking on this link.</p>
                   <button
                     onClick={() => {
                       navigate("/");

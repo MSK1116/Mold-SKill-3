@@ -6,7 +6,7 @@ import FreeBooks from "../components/FreeBooks";
 
 const Home = () => {
   useEffect(() => {
-    document.title = "Mold Skill";
+    document.title = "Mold Skill- Learn, Adapt & Grow";
   }, []);
 
   return (

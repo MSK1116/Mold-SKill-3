@@ -27,8 +27,8 @@ const Error = () => {
                   </button>
                 </div>
               </div>
-              <div className="hover:scale-105 duration-1000 transition-all">
-                <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
+              <div className="hover:scale-105  duration-1000 transition-all">
+                <img src="https://static-00.iconduck.com/assets.00/404-page-not-found-illustration-2048x998-yjzeuy4v.png" />
               </div>
             </div>
           </div>

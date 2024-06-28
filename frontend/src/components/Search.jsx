@@ -8,17 +8,16 @@ const Search = () => {
   const navigate = useNavigate();
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
+
   const fetchData = async (value) => {
     try {
-      const toastID = toast.loading("Searching...", {
-        position: "bottom-right",
-        id: toastID,
-      });
+      toast.remove();
+      toast.loading("Searching ...", { position: "bottom-right" });
       const notesXi = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
       const practiseXi = await axios.get("https://mold-s-kill-3-api.vercel.app/practisexi");
       const books = await axios.get("https://mold-s-kill-3-api.vercel.app/book");
 
-      toast.remove(toastID);
+      toast.remove();
       const allResult = [...notesXi.data, ...books.data, ...practiseXi.data];
       localStorage.setItem("allResultCash", JSON.stringify(allResult));
       const allResultCashString = localStorage.getItem("allResultCash");
@@ -60,11 +59,12 @@ const Search = () => {
     const result = allResultCash.filter((data) => {
       return value.length > 2 && data && ((data.name && isSubsequence(data.name, value)) || (data.keywords && isSubsequence(data.keywords, value)));
     });
-
+    toast.remove();
     setResults(result);
   };
 
   const handleChange = (value) => {
+    toast.loading("Searching ...", { position: "bottom-right" });
     const allResultCashString = localStorage.getItem("allResultCash");
     setInput(value);
     allResultCashString ? filterData(value) : fetchData(value);

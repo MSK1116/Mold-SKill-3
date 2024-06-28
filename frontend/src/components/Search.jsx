@@ -12,6 +12,7 @@ const Search = () => {
     try {
       const toastID = toast.loading("Searching...", {
         position: "bottom-right",
+        id: toastID,
       });
       const notesXi = await axios.get("https://mold-s-kill-3-api.vercel.app/notesxi");
       const practiseXi = await axios.get("https://mold-s-kill-3-api.vercel.app/practisexi");

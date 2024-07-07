@@ -4,9 +4,31 @@ import Footer from "../components/Footer";
 import Subject_banner from "./Subject_banner";
 import notes_list from "../../public/notes_list.json";
 import Practise_card1 from "./Practise_card1";
-const Mat_xii_p = () => {
-  const filterData = notes_list.filter((data) => data.id > 0);
+import toast from "react-hot-toast";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
+const Mat_xii_p = () => {
+  const [practiseList, setPractiseList] = useState([]);
+  useEffect(() => {
+    const toastID = toast.loading("Loading...", {
+      position: "top-center",
+    });
+    const getPractiseList = async () => {
+      try {
+        const res = await axios.get("https://mold-s-kill-3-api.vercel.app/practisexii");
+        toast.success("Loaded...", { duration: 3000, id: toastID });
+        setPractiseList(res.data);
+      } catch (error) {
+        console.log("error", error);
+        toast.error("Failed to fetch", { id: toastID });
+      } finally {
+        toast.remove(toastID);
+      }
+    };
+    getPractiseList();
+  }, []);
+  const filterData = practiseList.filter((data) => data.subject == "Mathematics");
   document.title = "Math-XII By Mold Skill";
 
   return (

@@ -1,226 +1,5 @@
 [
   {
-    "title": "Mathematics Weekly Test 1",
-    "set": "1",
-    "type": "Weekly Test",
-    "id": "001",
-    "subject": "Mathematics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-mat-4.pdf",
-    "auth": "",
-    "keywords": "Mathematics, Weekly Test, Set 1, Class XII, Exercises"
-  },
-  {
-    "title": "Mathematics Weekly Test 2",
-    "set": "2",
-    "type": "Weekly Test",
-    "id": "002",
-    "subject": "Mathematics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-mat-5.pdf",
-    "auth": "",
-    "keywords": "Mathematics, Weekly Test, Set 2, Class XII, Exercises"
-  },
-  {
-    "title": "Nepali Weekly Test 1",
-    "set": "1",
-    "type": "Weekly Test",
-    "id": "003",
-    "subject": "Nepali",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-nep-5.pdf",
-    "auth": "",
-    "keywords": "Nepali, Weekly Test, Set 1, Class XII, Language Exercises"
-  },
-  {
-    "title": "Physics Weekly Test 1",
-    "set": "1",
-    "type": "Weekly Test",
-    "id": "004",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-phy-5.pdf",
-    "auth": "",
-    "keywords": "Physics, Weekly Test, Set 1, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Weekly Test 2",
-    "set": "2",
-    "type": "Weekly Test",
-    "id": "005",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-phy-6.pdf",
-    "auth": "",
-    "keywords": "Physics, Weekly Test, Set 2, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Weekly Test 3",
-    "set": "3",
-    "type": "Weekly Test",
-    "id": "006",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-phy-7.pdf",
-    "auth": "",
-    "keywords": "Physics, Weekly Test, Set 3, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Weekly Test 4",
-    "set": "4",
-    "type": "Weekly Test",
-    "id": "007",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-phy-8.pdf",
-    "auth": "",
-    "keywords": "Physics, Weekly Test, Set 4, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Weekly Test 5",
-    "set": "5",
-    "type": "Weekly Test",
-    "id": "008",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-phy-9.pdf",
-    "auth": "",
-    "keywords": "Physics, Weekly Test, Set 5, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Terminal Exam 1",
-    "set": "1",
-    "type": "Terminal Exam",
-    "id": "009",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-phy-2.pdf",
-    "auth": "",
-    "keywords": "Physics, Terminal Exam, Set 1, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Terminal Exam 2",
-    "set": "2",
-    "type": "Terminal Exam",
-    "id": "010",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-phy-3.pdf",
-    "auth": "",
-    "keywords": "Physics, Terminal Exam, Set 2, Class XII, Exercises"
-  },
-  {
-    "title": "Physics Terminal Exam 3",
-    "set": "3",
-    "type": "Terminal Exam",
-    "id": "011",
-    "subject": "Physics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-phy-4.pdf",
-    "auth": "",
-    "keywords": "Physics, Terminal Exam, Set 3, Class XII, Exercises"
-  },
-  {
-    "title": "Chemistry Terminal Exam 1",
-    "set": "1",
-    "type": "Terminal Exam",
-    "id": "012",
-    "subject": "Chemistry",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-chm-1.pdf",
-    "auth": "",
-    "keywords": "Chemistry, Terminal Exam, Set 1, Class XII, Exercises"
-  },
-  {
-    "title": "Chemistry Terminal Exam 2",
-    "set": "2",
-    "type": "Terminal Exam",
-    "id": "013",
-    "subject": "Chemistry",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-chm-2.pdf",
-    "auth": "",
-    "keywords": "Chemistry, Terminal Exam, Set 2, Class XII, Exercises"
-  },
-  {
-    "title": "Chemistry Terminal Exam 3",
-    "set": "3",
-    "type": "Terminal Exam",
-    "id": "014",
-    "subject": "Chemistry",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-chm-3.pdf",
-    "auth": "",
-    "keywords": "Chemistry, Terminal Exam, Set 3, Class XII, Exercises"
-  },
-  {
-    "title": "Chemistry Terminal Exam 4",
-    "set": "4",
-    "type": "Terminal Exam",
-    "id": "015",
-    "subject": "Chemistry",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-chm-4.pdf",
-    "auth": "",
-    "keywords": "Chemistry, Terminal Exam, Set 4, Class XII, Exercises"
-  },
-  {
-    "title": "English Terminal Exam 1",
-    "set": "1",
-    "type": "Terminal Exam",
-    "id": "016",
-    "subject": "English",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-eng-1.pdf",
-    "auth": "",
-    "keywords": "English, Terminal Exam, Set 1, Class XII, Language Exercises"
-  },
-  {
-    "title": "English Terminal Exam 2",
-    "set": "2",
-    "type": "Terminal Exam",
-    "id": "017",
-    "subject": "English",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-eng-2.pdf",
-    "auth": "",
-    "keywords": "English, Terminal Exam, Set 2, Class XII, Language Exercises"
-  },
-  {
-    "title": "English Terminal Exam 3",
-    "set": "3",
-    "type": "Terminal Exam",
-    "id": "018",
-    "subject": "English",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-eng-3.pdf",
-    "auth": "",
-    "keywords": "English, Terminal Exam, Set 3, Class XII, Language Exercises"
-  },
-  {
-    "title": "Computer Science Terminal Exam 1",
-    "set": "1",
-    "type": "Terminal Exam",
-    "id": "019",
-    "subject": "Computer Science",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-comp-4.pdf",
-    "auth": "",
-    "keywords": "Computer Science, Terminal Exam, Set 1, Class XII, Exercises"
-  },
-  {
-    "title": "Mathematics Terminal Exam 1",
-    "set": "1",
-    "type": "Terminal Exam",
-    "id": "020",
-    "subject": "Mathematics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-mat-1.pdf",
-    "auth": "",
-    "keywords": "Mathematics, Terminal Exam, Set 1, Class XII, Exercises"
-  },
-  {
-    "title": "Mathematics Terminal Exam 2",
-    "set": "2",
-    "type": "Terminal Exam",
-    "id": "021",
-    "subject": "Mathematics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-mat-2.pdf",
-    "auth": "",
-    "keywords": "Mathematics, Terminal Exam, Set 2, Class XII, Exercises"
-  },
-  {
-    "title": "Mathematics Terminal Exam 3",
-    "set": "3",
-    "type": "Terminal Exam",
-    "id": "022",
-    "subject": "Mathematics",
-    "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-mat-3.pdf",
-    "auth": "",
-    "keywords": "Mathematics, Terminal Exam,set 3"
-  },
-
-  {
     "title": "Mathematics Weekly Test 4",
     "set": "4",
     "type": "Weekly Test",
@@ -313,7 +92,7 @@
   {
     "title": "Physics Terminal Exam 3",
     "set": "3",
-    "type": "Terminal Exam",
+    "type": "Pre-Board",
     "id": "010",
     "subject": "Physics",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-phy-3.pdf",
@@ -323,7 +102,7 @@
   {
     "title": "Physics Terminal Exam 4",
     "set": "4",
-    "type": "Terminal Exam",
+    "type": "NEB",
     "id": "011",
     "subject": "Physics",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-phy-4.pdf",
@@ -353,7 +132,7 @@
   {
     "title": "Chemistry Terminal Exam 3",
     "set": "3",
-    "type": "Terminal Exam",
+    "type": "Pre-Board",
     "id": "014",
     "subject": "Chemistry",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-chm-3.pdf",
@@ -363,7 +142,7 @@
   {
     "title": "Chemistry Terminal Exam 4",
     "set": "4",
-    "type": "Terminal Exam",
+    "type": "NEB",
     "id": "015",
     "subject": "Chemistry",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-chm-4.pdf",
@@ -393,7 +172,7 @@
   {
     "title": "English Terminal Exam 3",
     "set": "3",
-    "type": "Terminal Exam",
+    "type": "Pre-Board",
     "id": "018",
     "subject": "English",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-eng-3.pdf",
@@ -403,9 +182,9 @@
   {
     "title": "Computer Science Terminal Exam 4",
     "set": "4",
-    "type": "Terminal Exam",
+    "type": "NEB",
     "id": "019",
-    "subject": "Computer Science",
+    "subject": "Computer",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-comp-4.pdf",
     "auth": "",
     "keywords": "Computer Science, Terminal Exam, Set 4, Class XII, Exercises"
@@ -433,7 +212,7 @@
   {
     "title": "Mathematics Terminal Exam 3",
     "set": "3",
-    "type": "Terminal Exam",
+    "type": "NEB",
     "id": "022",
     "subject": "Mathematics",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-mat-3.pdf",
@@ -463,7 +242,7 @@
   {
     "title": "Nepali Terminal Exam 3",
     "set": "3",
-    "type": "Terminal Exam",
+    "type": "Pre-Board",
     "id": "025",
     "subject": "Nepali",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-nep-3.pdf",
@@ -513,7 +292,7 @@
   {
     "title": "Nepali Terminal Exam 4",
     "set": "4",
-    "type": "Terminal Exam",
+    "type": "NEB",
     "id": "030",
     "subject": "Nepali",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-74-nep-4.pdf",
@@ -525,7 +304,7 @@
     "set": "1",
     "type": "Terminal Exam",
     "id": "031",
-    "subject": "Computer Science",
+    "subject": "Computer",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-comp-1.pdf",
     "auth": "",
     "keywords": "Computer Science, Terminal Exam, Set 1, Class XII, Exercises"
@@ -535,7 +314,7 @@
     "set": "2",
     "type": "Terminal Exam",
     "id": "032",
-    "subject": "Computer Science",
+    "subject": "Computer",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-comp-2.pdf",
     "auth": "",
     "keywords": "Computer Science, Terminal Exam, Set 2, Class XII, Exercises"
@@ -543,9 +322,9 @@
   {
     "title": "Computer Science Terminal Exam 3",
     "set": "3",
-    "type": "Terminal Exam",
+    "type": "Pre-Board",
     "id": "033",
-    "subject": "Computer Science",
+    "subject": "Computer",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-75-comp-3.pdf",
     "auth": "",
     "keywords": "Computer Science, Terminal Exam, Set 3, Class XII, Exercises"
@@ -633,7 +412,7 @@
   {
     "title": "English Terminal Exam 4",
     "set": "4",
-    "type": "Terminal Exam",
+    "type": "NEB",
     "id": "042",
     "subject": "English",
     "link": "/DATA DIR/classXiiPractiseQuestion/tm-eng-4.pdf",
@@ -645,7 +424,7 @@
     "set": "5",
     "type": "Weekly Test",
     "id": "043",
-    "subject": "Computer Science",
+    "subject": "Computer",
     "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-comp-5.pdf",
     "auth": "",
     "keywords": "Computer Science, Weekly Test, Set 5, Class XII, Exercises"
@@ -655,7 +434,7 @@
     "set": "6",
     "type": "Weekly Test",
     "id": "044",
-    "subject": "Computer Science",
+    "subject": "Computer",
     "link": "/DATA DIR/classXiiPractiseQuestion/wk-40-comp-6.pdf",
     "auth": "",
     "keywords": "Computer Science, Weekly Test, Set 6, Class XII, Exercises"

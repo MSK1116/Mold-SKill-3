@@ -33,7 +33,6 @@ const Practise_banner = () => {
         <div className="mx-auto my-16 max-w-screen-xl px-4 py-4 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="mx-auto max-w-lg text-center">
             <p className="mt-4 text-blue-300">For class XII</p>
-            <p className="mt-2 text-gray-600 dark:text-gray-200s">coming soon...</p>
           </div>
         </div>
         <div className="mt-2 grid grid-cols-1 md:grid-cols-4 gap-8 ">

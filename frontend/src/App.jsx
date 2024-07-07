@@ -41,7 +41,7 @@ import Comp_xii_p from "./Practise/Comp_xii_p";
 import Eng_xii_p from "./Practise/Eng_xii_p";
 import Mat_xii_p from "./Practise/Mat_xii_p";
 import Nepali_xii_p from "./Practise/Nepali_xii_p";
-import Phy_xii_p from "./Practise/Phy_xi_p";
+import Phy_xii_p from "./Practise/Phy_xii_p";
 import Error from "./components/Error";
 
 const App = () => {

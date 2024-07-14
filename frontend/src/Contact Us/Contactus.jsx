@@ -9,6 +9,7 @@ const Contactus = () => {
     <>
       <Navbar />
       <Contactus_banner />
+      <Footer />
     </>
   );
 };

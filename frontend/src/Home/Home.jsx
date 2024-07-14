@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <Navbar />
       <Banner1 />
-      <FreeBooks />
+      {/* <FreeBooks /> */}
       <Footer />
     </>
   );

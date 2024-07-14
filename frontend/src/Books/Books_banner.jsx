@@ -50,11 +50,12 @@ const Books_banner = () => {
       </section>
       <div className="max-w-screen-2xl px-4 py-8 sm:px-6 sm:py-12 mt-10 lg:px-8 lg:py-16 ">
         <h1 className="text-xl font-bold text"> Books for you!</h1>
-        <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 ">
+        {/* <div className="grid  grid-cols-1 md:grid-cols-4 gap-4 ">
           {shfdata.map((shfData) => (
             <Cards2 key={shfData.id} items={shfData} />
           ))}
-        </div>
+        </div> */}
+        We will be back with this feature.
       </div>
     </>
   );

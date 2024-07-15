@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-
+import toast from "react-hot-toast";
 export const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {

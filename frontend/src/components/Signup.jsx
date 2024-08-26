@@ -29,11 +29,11 @@ function Signup() {
 
     const ogImage = document.querySelector("meta[property='og:image']");
     if (ogImage) {
-      ogImage.content = "https://raw.githubusercontent.com/MSK1116/Mold-SKill-3/d089a916caaea06dd8185b9c85732ef108cceca3/frontend/public/signup.png"; // Update with the path to your og:image
+      ogImage.setAttribute("content", "https://raw.githubusercontent.com/MSK1116/Mold-SKill-3/d089a916caaea06dd8185b9c85732ef108cceca3/frontend/public/signup.png");
     } else {
       const newOgImage = document.createElement("meta");
-      newOgImage.property = "og:image";
-      newOgImage.content = "https://raw.githubusercontent.com/MSK1116/Mold-SKill-3/d089a916caaea06dd8185b9c85732ef108cceca3/frontend/public/signup.png"; // Update with the path to your og:image
+      newOgImage.setAttribute("property", "og:image");
+      newOgImage.setAttribute("content", "https://raw.githubusercontent.com/MSK1116/Mold-SKill-3/d089a916caaea06dd8185b9c85732ef108cceca3/frontend/public/signup.png");
       document.head.appendChild(newOgImage);
     }
   }, []);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import { useForm } from "react-hook-form";
@@ -8,8 +8,36 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import Svg_teaching_e_mc from "../SVG/Svg_teaching_e_mc";
 
+import signupImg from "/signup.png";
+
 function Signup() {
-  document.title = "Signup | Mold Skill";
+  useEffect(() => {
+    document.title = "Signup | Mold Skill";
+
+    // Change favicon
+    // const favicon = document.querySelector("link[rel='icon']");
+    // if (favicon) {
+    //   favicon.href = "/path-to-your-favicon.ico"; // Update with the path to your favicon
+    // } else {
+    //   const newFavicon = document.createElement("link");
+    //   newFavicon.rel = "icon";
+    //   newFavicon.href = "/path-to-your-favicon.ico"; // Update with the path to your favicon
+    //   document.head.appendChild(newFavicon);
+    // }
+
+    // Change og:image
+
+    const ogImage = document.querySelector("meta[property='og:image']");
+    if (ogImage) {
+      ogImage.content = { signupImg }; // Update with the path to your og:image
+    } else {
+      const newOgImage = document.createElement("meta");
+      newOgImage.property = "og:image";
+      newOgImage.content = { signupImg }; // Update with the path to your og:image
+      document.head.appendChild(newOgImage);
+    }
+  }, []);
+
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();

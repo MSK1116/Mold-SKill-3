@@ -9,6 +9,7 @@ import notesRoute from "../backend/route/notesxi.route.js";
 import contactRoute from "../backend/route/contact.route.js";
 import practiseRoute from "../backend/route/practisexi.route.js";
 import practiseXiiRoute from "../backend/route/practisexii.route.js";
+import LocationRoute from "../backend/route/location.route.js";
 
 const app = express();
 app.use(cors());
@@ -37,6 +38,7 @@ app.use("/practisexii", practiseXiiRoute);
 app.use("/notesxi", practiseRoute);
 app.use("/user", userRoute);
 app.use("/contact", contactRoute);
+app.use("/location", LocationRoute);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

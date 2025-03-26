@@ -21,7 +21,7 @@ export const pushAdvice = async (req, res) => {
 
     const user = await Advice.findOne({ email });
     if (user) {
-      return res.status(400).json({ message: "advice already there" });
+      return res.status(400).json({ message: false });
     }
 
     const createdAdvice = new Advice({
@@ -35,9 +35,9 @@ export const pushAdvice = async (req, res) => {
       Que6: additionalSuggestions,
     });
     await createdAdvice.save();
-    res.status(201).json({ message: "Advice created" });
+    res.status(201).json({ message: true });
   } catch (error) {
     console.log("Failed advice_controller.js", error.message);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: false });
   }
 };

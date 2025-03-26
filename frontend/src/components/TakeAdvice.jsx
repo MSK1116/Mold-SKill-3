@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/Authprovider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -6,18 +6,16 @@ import axios from "axios";
 const TakeAdvice = () => {
   const [authUser, setAuthUser] = useAuth();
   const navigate = useNavigate();
-  useEffect(() => {
-    console.log(authUser);
-    document.getElementById("my_modal_1").showModal();
-  }, []);
 
+  const [showAdvice, setShowAdvice] = useState(false);
   useEffect(() => {
     const lookForAdvice = async () => {
       await axios
         .post("https://mold-s-kill-3-api.vercel.app/advice/advice", authUser.email)
         .then((res) => {
-          if (res.data) {
-            console.log(res.data);
+          if (res.data.message) {
+            setShowAdvice(true);
+            document.getElementById("my_modal_1").showModal();
           }
         })
         .catch((err) => {

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/Authprovider";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const TakeAdvice2 = () => {
   const [authUser, setAuthUser] = useAuth();
+  const [submitted, setSubmitted] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -13,9 +17,26 @@ const TakeAdvice2 = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    try {
-      console.log(data);
-    } catch (error) {}
+    const adviceData = {
+      fullname: authUser.fullname,
+      email: authUser.email,
+      Que1: data.usefulness,
+      Que2: data.improvement,
+      Que3: data.contributionInterest,
+      Que4: data.shutdown,
+      Que5: data.recommendation,
+      Que6: data.additionalSuggestions,
+    };
+    await axios
+      .post("https://mold-s-kill-3-api.vercel.app/advice/pushAdvice", adviceData)
+      .then((res) => {
+        if (res.data.message) {
+          setSubmitted(true);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <>

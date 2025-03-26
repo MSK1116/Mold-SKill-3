@@ -5,6 +5,7 @@ export const advice = async (req, res) => {
   console.log(email + "HI" + req.body);
   try {
     const user = await Advice.findOne({ email });
+    console.log(user);
     if (user) {
       return res.status(400).json({ message: false });
     }

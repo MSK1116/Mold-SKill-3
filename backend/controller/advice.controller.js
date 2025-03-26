@@ -1,6 +1,7 @@
 import Advice from "../model/advice.modal.js";
 
 export const advice = async (req, res) => {
+  const { email } = req.body;
   try {
     const user = await Advice.findOne({ email });
     if (user) {

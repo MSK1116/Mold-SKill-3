@@ -87,7 +87,7 @@ const TakeAdvice2 = () => {
             </div>
 
             <button disabled={submitted} type="submit" className={`   bg-blue-500 text-white p-2 rounded-md w-full `}>
-              {submitted ? "Sent" : "Send"}
+              {submitted ? "Sent 👍" : "Send"}
             </button>
           </form>
         </div>

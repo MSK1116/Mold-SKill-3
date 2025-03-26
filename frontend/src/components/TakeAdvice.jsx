@@ -11,7 +11,7 @@ const TakeAdvice = () => {
 
   useEffect(() => {
     const lookForAdvice = async () => {
-      await axios
+      https: await axios
         .post("https://mold-s-kill-3-api.vercel.app/advice/advice", { email: authUser.email })
         .then((res) => {
           console.log(res.data.message);

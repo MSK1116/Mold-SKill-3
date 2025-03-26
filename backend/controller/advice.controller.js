@@ -2,14 +2,13 @@ import Advice from "../model/advice.modal.js";
 
 export const advice = async (req, res) => {
   const { email } = req.body;
-  console.log(email);
+  console.log(email + "HI" + req.body);
   try {
     const user = await Advice.findOne({ email });
     if (user) {
       return res.status(400).json({ message: false });
-    } else {
-      res.status(201).json({ message: true });
     }
+    res.status(201).json({ message: true });
   } catch (error) {
     console.log("Failed user_controller.js", error.message);
     res.status(500).json({ message: "Internal server error" });

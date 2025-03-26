@@ -8,13 +8,14 @@ const TakeAdvice = () => {
   const navigate = useNavigate();
 
   const [showAdvice, setShowAdvice] = useState(false);
+
   useEffect(() => {
     const lookForAdvice = async () => {
       await axios
         .post("https://mold-s-kill-3-api.vercel.app/advice/advice", authUser.email)
         .then((res) => {
+          console.log(res.data.message);
           if (res.data.message) {
-            setShowAdvice(true);
             document.getElementById("my_modal_1").showModal();
           }
         })

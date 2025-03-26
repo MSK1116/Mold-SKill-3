@@ -86,8 +86,8 @@ const TakeAdvice2 = () => {
               <textarea className="w-full bg-slate-300 outline-none p-2 rounded-md" {...register("additionalSuggestions")} placeholder="Your suggestions..." />
             </div>
 
-            <button type="submit" className="bg-blue-500 text-white p-2 rounded-md w-full">
-              Submit Feedback
+            <button disabled={submitted} type="submit" className={`   bg-blue-500 text-white p-2 rounded-md w-full `}>
+              {submitted ? "Sent" : "Send"}
             </button>
           </form>
         </div>

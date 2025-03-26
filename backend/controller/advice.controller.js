@@ -17,7 +17,7 @@ export const advice = async (req, res) => {
 
 export const pushAdvice = async (req, res) => {
   try {
-    const { fullname, email, usefulness, improvement, contributionInterest, shutdown, recommendation, additionalSuggestions } = req.body;
+    const { fullname, email, Que1, Que2, Que3, Que4, Que5, Que6 } = req.body;
 
     const user = await Advice.findOne({ email });
     if (user) {
@@ -27,12 +27,12 @@ export const pushAdvice = async (req, res) => {
     const createdAdvice = new Advice({
       fullname: fullname,
       email: email,
-      Que1: usefulness,
-      Que2: improvement,
-      Que3: contributionInterest,
-      Que4: shutdown,
-      Que5: recommendation,
-      Que6: additionalSuggestions,
+      Que1: Que1,
+      Que2: Que2,
+      Que3: Que3,
+      Que4: Que4,
+      Que5: Que5,
+      Que6: Que6,
     });
     await createdAdvice.save();
     res.status(201).json({ message: true });

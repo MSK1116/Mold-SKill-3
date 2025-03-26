@@ -4,6 +4,7 @@ import Banner1 from "../components/Banner1";
 import Footer from "../components/Footer";
 import FreeBooks from "../components/FreeBooks";
 import Location from "../components/Location";
+import TakeAdvice from "../components/TakeAdvice";
 
 const Home = () => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const Home = () => {
 
   return (
     <>
+      <TakeAdvice />
       <Location />
       <Navbar />
       <Banner1 />

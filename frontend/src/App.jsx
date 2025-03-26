@@ -43,6 +43,7 @@ import Mat_xii_p from "./Practise/Mat_xii_p";
 import Nepali_xii_p from "./Practise/Nepali_xii_p";
 import Phy_xii_p from "./Practise/Phy_xii_p";
 import Error from "./components/Error";
+import TakeAdvice2 from "./components/TakeAdvice2";
 
 const App = () => {
   const [authUser, setAuthUser] = useAuth();
@@ -89,6 +90,8 @@ const App = () => {
           <Route path="/practise/xi/mathematics" element={<Mat_xi_p />} />
           <Route path="/practise/xi/nepali" element={<Nepali_xi_p />} />
           <Route path="/practise/xi/physics" element={<Phy_xi_p />} />
+
+          <Route path="takeadvice" element={<TakeAdvice2 />} />
         </Routes>
       </div>
     </>

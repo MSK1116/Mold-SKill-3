@@ -5,6 +5,7 @@ import cors from "cors";
 
 import bookRoute from "../backend/route/book.route.js";
 import userRoute from "../backend/route/user.route.js";
+import adviceRoute from "../backend/route/advice.route.js";
 import notesRoute from "../backend/route/notesxi.route.js";
 import contactRoute from "../backend/route/contact.route.js";
 import practiseRoute from "../backend/route/practisexi.route.js";
@@ -39,6 +40,7 @@ app.use("/notesxi", practiseRoute);
 app.use("/user", userRoute);
 app.use("/contact", contactRoute);
 app.use("/location", LocationRoute);
+app.use("/advice", adviceRoute);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

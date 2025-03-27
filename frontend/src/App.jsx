@@ -62,7 +62,7 @@ const App = () => {
           <Route path="/contact" element={<Contactus />} />
           <Route path="/pdfA" element={authUser ? <PdfViewer /> : <Navigate to="/register" />} />
           <Route path="/register" element={authUser ? <Navigate to="/" /> : <Signup />} />
-
+          <Route path="takeadvice" element={authUser ? <TakeAdvice2 /> : <Signup />} />
           <Route path="/notes/xii/chemistry" element={<Chem_xii />} />
           <Route path="/notes/xii/computer" element={<Comp_xii />} />
           <Route path="/notes/xii/english" element={<Eng_xii />} />
@@ -90,8 +90,6 @@ const App = () => {
           <Route path="/practise/xi/mathematics" element={<Mat_xi_p />} />
           <Route path="/practise/xi/nepali" element={<Nepali_xi_p />} />
           <Route path="/practise/xi/physics" element={<Phy_xi_p />} />
-
-          <Route path="takeadvice" element={<TakeAdvice2 />} />
         </Routes>
       </div>
     </>
